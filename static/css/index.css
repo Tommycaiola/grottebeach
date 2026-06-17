@@ -1,0 +1,321 @@
+@font-face {
+    font-family: 'Pristina';
+    src: url('../font/PRISTINA.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+    overscroll-behavior-x: none;
+    overflow-x: clip;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    header .nav-logo {
+        font-size: 2.1rem !important;
+    }
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+.bg-mesh {
+    background-color: #faf9fc;
+    background-image:
+        radial-gradient(at 0% 0%, rgba(242, 238, 233, 0.5) 0, transparent 50%),
+        radial-gradient(at 50% 0%, rgba(164, 211, 147, 0.1) 0, transparent 50%);
+}
+
+.text-shadow-sm {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Hero fade-in ── */
+.fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── About carousel ── */
+.about-carousel {
+    position: absolute;
+    inset: 0;
+}
+
+.about-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+.about-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.about-dots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.about-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.45);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, width 0.3s;
+    padding: 0;
+}
+
+.about-dot.active {
+    background: #ffffff;
+    width: 24px;
+}
+
+/* ── Reviews carousel ── */
+.reviews-track {
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.review-slide {
+    min-width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 8px;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 2rem;
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 760px;
+}
+
+@media (min-width: 640px) {
+    .review-card {
+        padding: 3rem;
+    }
+}
+
+.reviews-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, width 0.3s;
+    padding: 0;
+}
+
+.reviews-dot.active {
+    background: #ffffff;
+    width: 24px;
+}
+
+/* ── Navbar scroll behaviour ── */
+header {
+    transition: background 0.45s ease, backdrop-filter 0.45s ease,
+                box-shadow 0.45s ease, border-color 0.45s ease;
+}
+header .nav-logo {
+    font-family: 'Pristina', cursive;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 1.75rem;
+    transition: color 0.45s ease;
+}
+header .nav-links a {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    line-height: 1;
+    padding-bottom: 4px;
+    color: #64748b;
+    position: relative;
+    transition: color 0.45s ease;
+}
+header .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: transparent;
+    transition: background 0.45s ease;
+}
+header .nav-links a:hover {
+    color: #1a4b9f;
+}
+header .nav-links a.nav-active {
+    color: #1a4b9f;
+}
+header .nav-links a.nav-active::after {
+    background: rgba(26, 75, 159, 0.5);
+}
+header .nav-btn {
+    transition: color 0.45s ease, background 0.45s ease, border-color 0.45s ease;
+}
+
+/* ── Hamburger icon ── */
+.nav-hamburger .material-symbols-outlined {
+    color: #1a4b9f;
+    font-size: 26px;
+    transition: color 0.45s ease;
+}
+
+/* ── Mobile full-screen menu overlay ── */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 49;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(250, 249, 252, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.mobile-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+/* Tema scuro quando sull'hero */
+.mobile-menu-link {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1a4b9f;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+.mobile-menu-link:hover {
+    border-bottom-color: rgba(26, 75, 159, 0.4);
+}
+.mobile-menu-link.nav-active {
+    border-bottom-color: rgba(26, 75, 159, 0.6);
+}
+.mobile-prenota-btn {
+    transition: background 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+}
+
+/* ── Gallery step (dual vertical / mobile horizontal) ── */
+.gallery-dual {
+    display: flex;
+    height: 72vh;
+    gap: 4px;
+    overflow: hidden;
+}
+.gallery-dual__col {
+    width: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.gallery-dual__track {
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+}
+.gallery-dual__track img {
+    width: 100%;
+    height: 72vh;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* Mobile: 2 righe orizzontali che scorrono lateralmente */
+@media (max-width: 767px) {
+    .gallery-dual {
+        flex-direction: column;
+        height: auto;
+        gap: 4px;
+    }
+    .gallery-dual__col {
+        width: 100%;
+        height: 58vw;
+        flex-shrink: 0;
+    }
+    .gallery-dual__track {
+        flex-direction: row;
+        height: 100%;
+    }
+    .gallery-dual__track img {
+        width: 100vw;
+        height: 100%;
+        flex-shrink: 0;
+    }
+}
+
+/* ── Locale diagonal split ── */
+
+/*
+  La maschera ha un clip-path trapezoidale che produce il taglio \ tra foto e testo:
+    top    → la maschera inizia al 48% (foto occupa 0–48%)
+    bottom → la maschera inizia al 58% (foto occupa 0–58%)
+  Il bordo sinistro scende inclinandosi verso destra = orientamento \.
+*/
+.locale-split__mask {
+    clip-path: polygon(48% 0, 100% 0, 100% 100%, 58% 100%);
+}
+
+@media (max-width: 1023px) {
+    .locale-split__panel {
+        padding-top: 2.5rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/* ── Experience cards: touch active state (mirrors group-hover) ── */
+.experience-card.is-active img {
+    transform: scale(1.1);
+}
+.experience-card.is-active .card-p-hide {
+    opacity: 1;
+}
+.experience-card.is-active .card-btn {
+    width: 100%;
+    justify-content: space-between;
+}
+.experience-card.is-active .card-btn-label {
+    display: block;
+}
+

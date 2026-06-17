@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esperienze &amp; Attività | Grotte Beach</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#a8caef",
+                        "primary-container": "#1a4b9f",
+                        "outline": "#73777e",
+                        "on-primary-fixed-variant": "#274969",
+                        "tertiary-container": "#073002",
+                        "secondary-fixed-dim": "#c5c7c8",
+                        "surface-container-highest": "#e3e2e5",
+                        "surface-dim": "#dadadd",
+                        "on-tertiary": "#ffffff",
+                        "background": "#faf9fc",
+                        "inverse-surface": "#2f3033",
+                        "on-surface-variant": "#42474d",
+                        "outline-variant": "#c3c7ce",
+                        "primary": "#1a4b9f",
+                        "on-primary-container": "#7293b6",
+                        "secondary-container": "#e1e3e4",
+                        "secondary-fixed": "#e1e3e4",
+                        "secondary": "#5c5f60",
+                        "surface-container": "#eeedf0",
+                        "on-secondary": "#ffffff",
+                        "surface": "#faf9fc",
+                        "on-background": "#1a1c1e",
+                        "on-secondary-fixed": "#191c1d",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#a4d393",
+                        "surface-bright": "#faf9fc",
+                        "tertiary": "#011900",
+                        "on-secondary-container": "#626566",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#28501e",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f1f0f3",
+                        "primary-fixed": "#cfe5ff",
+                        "surface-variant": "#e3e2e5",
+                        "on-tertiary-container": "#6f9b60",
+                        "on-secondary-fixed-variant": "#454748",
+                        "surface-tint": "#406182",
+                        "on-surface": "#1a1c1e",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f4f3f6",
+                        "on-primary-fixed": "#001d34",
+                        "on-tertiary-fixed": "#022100",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e8e8eb",
+                        "primary-fixed-dim": "#a8caef",
+                        "tertiary-fixed": "#c0f0ad"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        lg: "48px",
+                        xl: "80px",
+                        xs: "4px",
+                        gutter: "24px",
+                        md: "24px",
+                        sm: "12px",
+                        base: "8px",
+                        "container-max": "1280px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Epilogue"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Epilogue"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "display-xl": ["Epilogue"],
+                        "label-sm": ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "500" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "display-xl": ["72px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "label-sm": ["13px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link href="/static/css/esperienze.css" rel="stylesheet" />
+</head>
+
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+
+    <!-- ===================== TOP NAVIGATION ===================== -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-white/10 shadow-sm">
+        <nav class="flex justify-between items-center px-8 py-1 w-full">
+
+            <div class="nav-logo tracking-[0.1em] text-[#1a4b9f] dark:text-white">
+                <img src="/static/img/Home/logo.svg" alt="Grotte Beach" class="h-20 w-auto object-contain" />
+            </div>
+
+            <!-- Desktop: links + button | Mobile: hamburger -->
+            <div class="flex items-center gap-6">
+
+                <div class="nav-links hidden md:flex items-center gap-8">
+                    <a href="index.html">Home</a>
+                    <a href="servizi.html">Servizi</a>
+                    <a class="nav-active" href="esperienze_copia.html">Esperienze</a>
+                    <a href="food_V1.html">Food</a>
+                    <a href="eventi.html">Eventi</a>
+                    <a href="#">Merch</a>
+                    <a href="contact.html">Contatti</a>
+                </div>
+
+                <a href="tel:+393891013881" class="nav-btn hidden md:block bg-[#1a4b9f] text-white px-6 py-2.5 rounded-full font-label-sm uppercase tracking-wider scale-95 active:scale-90 transition-transform">
+                    Prenota Ora
+                </a>
+
+                <!-- Hamburger (mobile only) -->
+                <button id="menu-toggle" class="nav-hamburger md:hidden p-1" aria-label="Apri menu">
+                    <span class="material-symbols-outlined" id="menu-icon">menu</span>
+                </button>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Mobile full-screen menu overlay (outside header to avoid backdrop-filter containment) -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+        <nav class="flex flex-col items-center gap-10">
+            <a class="mobile-menu-link" href="index.html">Home</a>
+            <a class="mobile-menu-link" href="servizi.html">Servizi</a>
+            <a class="mobile-menu-link" href="esperienze_copia.html">Esperienze</a>
+            <a class="mobile-menu-link" href="food_V1.html">Food</a>
+            <a class="mobile-menu-link" href="eventi.html">Eventi</a>
+            <a class="mobile-menu-link" href="#">Merch</a>
+            <a class="mobile-menu-link" href="contact.html">Contatti</a>
+        </nav>
+        <a href="tel:+393891013881" class="mobile-prenota-btn mt-10 bg-[#1a4b9f] text-white px-10 py-4 rounded-full font-label-sm uppercase tracking-widest">
+            Prenota Ora
+        </a>
+    </div>
+
+    <main>
+
+        <!-- ===================== HERO ===================== -->
+        <section class="relative h-screen flex items-center justify-center overflow-hidden">
+
+            <!-- Background image -->
+            <div class="absolute inset-0 z-0">
+                <img
+                    class="w-full h-full object-cover"
+                    src="/static/img/heroesperienze.png"
+                    alt="Vista panoramica della baia di Mongiove"
+                />
+                <div class="absolute inset-0 bg-black/40"></div>
+            </div>
+
+            <!-- Hero content -->
+            <div class="relative z-10 text-center px-gutter">
+                <!-- <span class="fade-up font-label-sm text-white uppercase tracking-[0.3em] mb-4 block" data-delay="200">
+                    Canoe &middot; Barca &middot; Grotte
+                </span> -->
+                <h1 class="fade-up font-display-xl text-white text-5xl md:text-7xl mb-2" data-delay="100">
+                    Esperienze &amp; Attivit&agrave;
+                </h1>
+                <span class="fade-up font-label-sm text-white uppercase tracking-[0.3em] mb-2 block" data-delay="200">
+                    Canoe &middot; Barca &middot; Grotte
+                </span>
+                
+                <p class="fade-up font-body-lg text-white/90 max-w-2xl mx-auto" data-delay="300">
+                    Scopri la bellezza selvaggia della costa e il comfort esclusivo di Grotte Beach attraverso avventure curate tra mare e terra.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- ===================== ESCURSIONI IN BARCA ===================== -->
+        <section class="fade-up flex flex-col md:flex-row min-h-screen">
+
+            <!-- Testo sinistro -->
+            <div class="w-full md:w-1/2 flex flex-col justify-center px-10 md:px-24 py-24 bg-[#F2EEE9]">
+                <span class="font-label-sm text-on-primary-container uppercase tracking-widest mb-4 flex items-center gap-3">
+                    <span class="w-8 h-px bg-on-primary-container"></span>
+                    Escursioni In Barca
+                </span>
+                <h2 class="font-['Epilogue'] text-[40px] leading-[1.2] font-semibold text-primary mb-6">
+                    Giornata in barca in una riserva paradisiaca
+                </h2>
+                <p class="font-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                    Grotte Beach offre un servizio esclusivo di escursioni in barca lungo la suggestiva costa di Monte Giove, regalando un punto di vista privilegiato su uno dei tratti più affascinanti del litorale siciliano. 
+                    Durante il percorso si esplorano insenature nascoste, grotte naturali e piccoli angoli incontaminati accessibili solo via mare, vivendo un’esperienza autentica e lontana dalla folla. 
+                    
+                </p>
+                <p class="font-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                    Le escursioni sono pensate per offrire comfort, sicurezza e libertà, con la possibilità di personalizzare l’itinerario e godersi ogni istante tra sole, acqua e paesaggi mozzafiato. Un’attività perfetta per chi desidera scoprire la costa in modo diverso, tra natura, emozione e pura bellezza.
+                </p>
+                <a href="servizi.html#escursione-barca" class="inline-flex items-center gap-2 font-label-sm uppercase tracking-widest text-primary border-b border-primary/30 pb-1.5 w-fit hover:border-primary transition-all">
+                    Scopri di più
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                </a>
+            </div>
+
+            <!-- Immagine destra full-bleed -->
+            <div class="relative w-full md:w-1/2 h-80 md:h-auto">
+                <img
+                    class="absolute inset-0 w-full h-full object-cover"
+                    src="/static/img/EscursioniBarca2.png"
+                    alt="Grotte di Mongiove e acque cristalline"
+                />
+            </div>
+
+        </section>
+
+        <!-- ===================== ATTIVITÀ ===================== -->
+        <section id="attivita" class="bg-white">
+        <div class="px-gutter max-w-container-max mx-auto w-full">
+
+            <!-- Section header -->
+            <div class="fade-up flex flex-col items-center text-center py-xl pb-12 gap-6">
+                <div class="max-w-2xl">
+                    <span class="text-on-primary-container text-base font-bold uppercase tracking-widest">Altre Attivit&agrave;</span>
+                    <h2 class="font-headline-lg text-primary mt-2">Escursioni in Canoa &amp; Visita autonoma delle Grotte di Mongiove</h2>
+                </div>
+            </div>
+        </div>
+
+            <!-- 3-column video grid — full bleed -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 px-3 pb-3">
+
+                <!-- Col 1: Canoa -->
+                <div class="fade-up group relative h-[78vh] overflow-hidden rounded-xl cursor-pointer activity-video-card">
+                    <video class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-105 blur-sm" src="/static/videos/Canoa2.mp4" muted playsinline></video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                    <!-- Tag -->
+                    <div class="absolute top-5 left-5">
+                        <span class="bg-white/90 backdrop-blur-md px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">Tour In Canoa</span>
+                    </div>
+                    <!-- Play button -->
+                    <div class="play-overlay absolute inset-0 flex items-center justify-center transition-opacity duration-300">
+                        <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white" style="font-size:36px">play_arrow</span>
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <h3 class="font-['Epilogue'] text-[26px] leading-[1.2] font-semibold text-white mb-3">Noleggio Canoa </h3>
+                        <p class="text-white/75 text-[15px] leading-relaxed mb-5">Esplora le acque cristalline e le calette nascoste della costa di Mongiove a bordo di una canoa monoposto o biposto.</p>
+                        <div class="flex items-center gap-2 text-white font-label-sm uppercase tracking-widest">
+                            <a href="servizi.html#prezzi-canoa">Prezzi &amp; Info</a>
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 2: Grotte -->
+                <div class="fade-up group relative h-[78vh] overflow-hidden rounded-xl cursor-pointer activity-video-card" data-delay="100">
+                    <video class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-105 blur-sm" src="/static/videos/Percorso-grotte-completo.mp4" muted playsinline></video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                    <!-- Tag -->
+                    <div class="absolute top-5 left-5">
+                        <span class="bg-[#28501e] text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">A Piedi</span>
+                    </div>
+                    <!-- Play button -->
+                    <div class="play-overlay absolute inset-0 flex items-center justify-center transition-opacity duration-300">
+                        <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white" style="font-size:36px">play_arrow</span>
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <h3 class="font-['Epilogue'] text-[26px] leading-[1.2] font-semibold text-white mb-3">Visita Delle Grotte</h3>
+                        <p class="text-white/75 text-[15px] leading-relaxed mb-5">Le grotte di Mongiove sono facilmente accessibili e perfette per un pomeriggio di esplorazione indipendente.</p>
+                        <div class="flex items-center gap-2 text-white font-label-sm uppercase tracking-widest">
+                            <span>Itinerario in struttura</span>
+                            <!-- <span class="material-symbols-outlined text-sm">arrow_forward</span> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 3: Aperitivo -->
+                <div class="fade-up group relative h-[78vh] overflow-hidden rounded-xl cursor-pointer activity-video-card" data-delay="200">
+                    <video class="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-105 blur-sm" src="/static/videos/Aperitivo.mp4" muted playsinline></video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                    <!-- Tag -->
+                    <div class="absolute top-5 left-5">
+                        <span class="bg-primary text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">Esclusivo</span>
+                    </div>
+                    <!-- Play button -->
+                    <div class="play-overlay absolute inset-0 flex items-center justify-center transition-opacity duration-300">
+                        <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white" style="font-size:36px">play_arrow</span>
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <h3 class="font-['Epilogue'] text-[26px] leading-[1.2] font-semibold text-white mb-3">Aperitivo Al Tramonto</h3>
+                        <p class="text-white/75 text-[15px] leading-relaxed mb-5">Drink e stuzzichini mentre il sole si tuffa all'orizzonte sulle Isole Eolie.</p>
+                        <!-- Mobile: apre la chiamata -->
+                        <a href="tel:+393891013881" class="md:hidden flex items-center gap-2 text-white font-label-sm uppercase tracking-widest">
+                            <span>Riserva il Posto</span>
+                            <span class="material-symbols-outlined text-sm">phone</span>
+                        </a>
+                        <!-- Desktop: apre la pagina contatti -->
+                        <a href="contact.html" class="hidden md:flex items-center gap-2 text-white font-label-sm uppercase tracking-widest">
+                            <span>Riserva il Posto</span>
+                            <span class="material-symbols-outlined text-sm">phone</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        
+
+        <!-- ===================== Visita al Santuario del Tindari ===================== -->
+        <section class="fade-up bg-[#F2EEE9] overflow-hidden">
+            <div class="flex flex-col md:flex-row min-h-[680px]">
+
+                <!-- Immagine — metà sinistra come background puro -->
+                <div class="relative w-full md:w-1/2 h-72 md:h-auto">
+                    <img
+                        class="absolute inset-0 w-full h-full object-cover"
+                        src="/static/img/Santuario_Tidari.jpg"
+                        alt="Santuario della Madonna Nera di Tindari, Patti"
+                    />
+                    <!-- Pill badge -->
+                    <div class="absolute bottom-5 left-5">
+                        <span class="bg-white/90 backdrop-blur-md px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-primary rounded-full">
+                            A 5 min da Grotte Beach
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Testo — metà destra -->
+                <div class="w-full md:w-1/2 flex flex-col justify-center px-10 md:px-24 py-24">
+                    <span class="font-label-sm text-on-primary-container uppercase tracking-widest mb-4 flex items-center gap-3">
+                        <span class="w-8 h-px bg-on-primary-container"></span>
+                        Dintorni
+                    </span>
+                    <h2 class="font-['Epilogue'] text-[40px] leading-[1.2] font-semibold text-primary mb-6">
+                        Il Santuario della Madonna Nera di Tindari
+                    </h2>
+                    <p class="font-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                        Proprio sopra Grotte Beach, costruito sul monte Giove che domina il golfo di Patti, sorge uno dei luoghi sacri più suggestivi della Sicilia: il <strong class="text-primary font-semibold">Santuario della Madonna di Tindari</strong>.
+                    </p>
+                    <p class="font-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                        Con una vista mozzafiato sulla riserva naturale dei laghetti di Marinello e sulle Isole Eolie, il santuario è facilmente raggiungibile in soli <strong class="text-primary font-semibold">5 minuti d'auto</strong> dal nostro stabilimento. Una tappa d'eccezione da abbinare a una giornata tra le grotte e il mare cristallino di Mongiove.
+                    </p>
+                    <div class="inline-flex items-center gap-2 font-label-sm uppercase tracking-widest text-primary border-b border-primary/30 pb-1.5 w-fit">
+                        <span class="material-symbols-outlined text-base">location_on</span>
+                        Tindari, Patti (ME) — 5 min in auto
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== Galleria Esperienze Carosello ===================== -->
+        <section class="fade-up py-6 bg-white overflow-hidden">
+
+            <!-- Scrolling strip -->
+            <div class="gallery-wrapper w-full" style="cursor: grab;">
+                <div class="gallery-track flex gap-4 w-max">
+                    <!-- Set 1 la seconda -->
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/Famiglia_Grotta.jpeg" alt="La Grotta 1" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Grotta.jpg" alt="La Grotta" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Canoa_Esperienze.jpg" alt="Canoa" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/Grotta_Drive.jpeg" alt="La Grotta" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Attività.jpg" alt="Attività" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Galleria_mare.jpg" alt="Le Grotte" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/GrotteInside_2.jpg" alt="Le Grotte" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/SottoalTindari.jpg" alt="Sotto Tindari" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/Grotta_Drive_Fuori.jpeg" alt="La Grotta" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/calltoaction_esperienze.jpg" alt="Spiaggia" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Attività3.jpg" alt="Attività3" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Grotte_INside.jpg" alt="La Grotta Inside" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/riserva_drive2.jpeg" alt="Riserva Naturale" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/inbarca.jpeg" alt="In Barca" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/dentro_faraglione.jpeg" alt="Dentro il faraglione" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Servizi/Canoa.jpeg" alt="canoa" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/marinello.jpeg" alt="Marinello" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/foto_turista.jpeg" alt="Turista" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/canoa_faraglione.jpeg" alt="canoa faraglione" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/faraglione_buco.jpeg" alt="Grotta in mare" /></div>
+                    
+                    
+                    <!-- Set 2 (duplicato per loop infinito) -->
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/Famiglia_Grotta.jpeg" alt="La Grotta 1" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Grotta.jpg" alt="La Grotta" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Canoa_Esperienze.jpg" alt="Canoa" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/Grotta_Drive.jpeg" alt="La Grotta" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Attività.jpg" alt="Attività" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Galleria_mare.jpg" alt="Le Grotte" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/GrotteInside_2.jpg" alt="Le Grotte" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/SottoalTindari.jpg" alt="Sotto Tindari" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/Grotta_Drive_Fuori.jpeg" alt="La Grotta" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/calltoaction_esperienze.jpg" alt="Spiaggia" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Attività3.jpg" alt="Attività3" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Grotte_INside.jpg" alt="La Grotta Inside" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/riserva_drive2.jpeg" alt="Riserva Naturale" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/inbarca.jpeg" alt="In Barca" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/dentro_faraglione.jpeg" alt="Dentro il faraglione" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/Servizi/Canoa.jpeg" alt="canoa" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/marinello.jpeg" alt="Marinello" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/foto_turista.jpeg" alt="Turista" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/canoa_faraglione.jpeg" alt="canoa faraglione" /></div>
+                    <div class="gallery-item h-[420px] w-[420px] flex-shrink-0 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="/static/img/galleria_esperienze/faraglione_buco.jpeg" alt="Grotta in mare" /></div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ===================== Laghetti di Marinello ===================== -->
+        <section class="fade-up bg-[#F2EEE9] overflow-hidden">
+            <div class="flex flex-col md:flex-row min-h-[680px]">
+
+                <!-- Testo — metà sinistra -->
+                <div class="w-full md:w-1/2 flex flex-col justify-center px-10 md:px-24 py-24">
+                    <span class="font-label-sm text-on-primary-container uppercase tracking-widest mb-4 flex items-center gap-3">
+                        <span class="w-8 h-px bg-on-primary-container"></span>
+                        Riserva Naturale
+                    </span>
+                    <h2 class="font-['Epilogue'] text-[40px] leading-[1.2] font-semibold text-primary mb-6">
+                        I Laghetti di Marinello
+                    </h2>
+                    <p class="font-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                        A pochi minuti di navigazione da Grotte Beach si aprono i <strong class="text-primary font-semibold">Laghetti di Marinello</strong>, uno degli angoli più suggestivi e incontaminati della costa siciliana. Questi specchi d'acqua dolce e salmastra, incastonati tra le dune e il mare aperto, cambiano forma e colore con le stagioni, regalando uno spettacolo naturale unico nel suo genere.
+                    </p>
+                    <p class="font-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                        Raggiungibili esclusivamente via mare, i laghetti rappresentano una delle tappe più emozionanti delle nostre escursioni in barca: un luogo dove il silenzio, la natura e la bellezza selvaggia si fondono in un'esperienza che resta nel cuore.
+                    </p>
+                    <a href="tel:+393891013881" class="inline-flex items-center gap-2 font-label-sm uppercase tracking-widest text-primary border-b border-primary/30 pb-1.5 w-fit hover:border-primary transition-all">
+                        Prenota un'escursione
+                        <span class="material-symbols-outlined text-base">arrow_forward</span>
+                    </a>
+                </div>
+
+                <!-- Immagine — metà destra full-bleed -->
+                <div class="relative w-full md:w-1/2 h-72 md:h-auto">
+                    <img
+                        class="absolute inset-0 w-full h-full object-cover"
+                        src="/static/img/Punta_laghetti.webp"
+                        alt="Laghetti di Marinello, Riserva Naturale di Tindari"
+                    />
+                    <!-- Pill badge -->
+                    <div class="absolute bottom-5 right-5">
+                        <span class="bg-white/90 backdrop-blur-md px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-primary rounded-full">
+                            Solo via mare da Grotte Beach
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-white dark:bg-slate-950 border-t border-amber-900/10 w-full">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-10 py-20 max-w-7xl mx-auto">
+
+            <!-- Brand -->
+            <div class="space-y-8">
+                <img src="/static/img/Home/logo.svg" alt="Grotte Beach" class="h-20 w-auto object-contain" />
+                <p class="font-['Epilogue'] text-sm font-light leading-relaxed text-slate-800 dark:text-slate-200">
+                    Un locale nel cuore della costa siciliana di Mongiove. Vivi il ritmo della marea e il lusso della natura.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-[#1a4b9f] hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-sm">public</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-[#1a4b9f] hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-sm">photo_camera</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-[#1a4b9f] hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-sm">mail</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="grid grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h5 class="font-label-sm uppercase tracking-widest text-primary">Scopri</h5>
+                    <ul class="space-y-2">
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="#">Location</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="esperienze_copia.html">Esperienze</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="/food_V1.html">Food</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="#">Servizi</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="font-label-sm uppercase tracking-widest text-primary">Contatti</h5>
+                    <ul class="space-y-2">
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="https://www.instagram.com/grotte_beach/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="https://www.facebook.com/grottebeachmongiove" target="_blank" rel="noopener">Facebook</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="mailto:grottebeach@yahoo.com">Email</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="tel:+393891013881">Telefono</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="space-y-6">
+                <h5 class="font-label-sm uppercase tracking-widest text-primary">Resta in contatto</h5>
+                <p class="font-['Epilogue'] text-sm font-light text-slate-800">Aggiornamenti stagionali e accesso esclusivo agli eventi.</p>
+                <form class="flex border-b border-primary/20 focus-within:border-primary transition-all">
+                    <input
+                        class="bg-transparent border-none focus:ring-0 w-full font-label-sm uppercase tracking-wider text-xs py-3 px-0 placeholder:text-slate-400"
+                        placeholder="Indirizzo Email"
+                        type="email"
+                    />
+                    <button class="material-symbols-outlined text-primary" type="submit">trending_flat</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Footer bottom bar -->
+        <div class="max-w-7xl mx-auto px-10 py-10 border-t border-amber-900/5 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-['Epilogue'] text-sm font-light text-slate-500">&copy; 2026 Grotte Beach.</p>
+            <div class="flex gap-6 items-center">
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Sicilia, Italia</span>
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Mongiove - Patti (ME)</span>
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Sviluppato da <strong class="tracking-widest">TEKWORN</strong></span>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="/static/js/esperienze.js"></script>
+
+    <script>
+        // Play/pause on click — un solo video alla volta, no loop
+        var allCards = Array.from(document.querySelectorAll('.activity-video-card'));
+
+        function blurCard(c) {
+            var v = c.querySelector('video');
+            var o = c.querySelector('.play-overlay');
+            v.pause();
+            v.classList.add('blur-sm');
+            o.style.opacity = '1';
+            o.style.pointerEvents = '';
+        }
+
+        function playCard(c) {
+            var v = c.querySelector('video');
+            var o = c.querySelector('.play-overlay');
+            v.classList.remove('blur-sm');
+            o.style.opacity = '0';
+            o.style.pointerEvents = 'none';
+        }
+
+        allCards.forEach(function(card) {
+            var video = card.querySelector('video');
+
+            card.addEventListener('click', function() {
+                if (video.paused) {
+                    // Ferma tutti gli altri
+                    allCards.forEach(function(other) {
+                        if (other !== card) blurCard(other);
+                    });
+                    video.play();
+                    playCard(card);
+                } else {
+                    blurCard(card);
+                }
+            });
+
+            video.addEventListener('ended', function() {
+                blurCard(card);
+            });
+        });
+    </script>
+
+</body>
+</html>

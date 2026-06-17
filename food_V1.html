@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Food &amp; Drink | Grotte Beach</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#a8caef",
+                        "primary-container": "#1a4b9f",
+                        "outline": "#73777e",
+                        "on-primary-fixed-variant": "#274969",
+                        "tertiary-container": "#073002",
+                        "secondary-fixed-dim": "#c5c7c8",
+                        "surface-container-highest": "#e3e2e5",
+                        "surface-dim": "#dadadd",
+                        "on-tertiary": "#ffffff",
+                        "background": "#faf9fc",
+                        "inverse-surface": "#2f3033",
+                        "on-surface-variant": "#42474d",
+                        "outline-variant": "#c3c7ce",
+                        "primary": "#1a4b9f",
+                        "on-primary-container": "#7293b6",
+                        "secondary-container": "#e1e3e4",
+                        "secondary-fixed": "#e1e3e4",
+                        "secondary": "#5c5f60",
+                        "surface-container": "#eeedf0",
+                        "on-secondary": "#ffffff",
+                        "surface": "#faf9fc",
+                        "on-background": "#1a1c1e",
+                        "on-secondary-fixed": "#191c1d",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#a4d393",
+                        "surface-bright": "#faf9fc",
+                        "tertiary": "#011900",
+                        "on-secondary-container": "#626566",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#28501e",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f1f0f3",
+                        "primary-fixed": "#cfe5ff",
+                        "surface-variant": "#e3e2e5",
+                        "on-tertiary-container": "#6f9b60",
+                        "on-secondary-fixed-variant": "#454748",
+                        "surface-tint": "#406182",
+                        "on-surface": "#1a1c1e",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f4f3f6",
+                        "on-primary-fixed": "#001d34",
+                        "on-tertiary-fixed": "#022100",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e8e8eb",
+                        "primary-fixed-dim": "#a8caef",
+                        "tertiary-fixed": "#c0f0ad"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        lg: "48px",
+                        xl: "80px",
+                        xs: "4px",
+                        gutter: "24px",
+                        md: "24px",
+                        sm: "12px",
+                        base: "8px",
+                        "container-max": "1280px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Epilogue"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Epilogue"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "display-xl": ["Epilogue"],
+                        "label-sm": ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "500" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "display-xl": ["72px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "label-sm": ["13px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS (riusa il file food.css esistente) -->
+    <link href="/static/css/food.css" rel="stylesheet" />
+
+</head>
+
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+
+    <!-- ===================== TOP NAVIGATION ===================== -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-white/10 shadow-sm">
+        <nav class="flex justify-between items-center px-8 py-1 w-full">
+
+            <div class="nav-logo tracking-[0.1em] text-[#1a4b9f] dark:text-white">
+                <img src="/static/img/Home/logo.svg" alt="Grotte Beach" class="h-20 w-auto object-contain" />
+            </div>
+
+            <div class="flex items-center gap-6">
+                <div class="nav-links hidden md:flex items-center gap-8">
+                    <a href="index.html">Home</a>
+                    <a href="servizi.html">Servizi</a>
+                    <a href="esperienze_copia.html">Esperienze</a>
+                    <a class="nav-active" href="food_V1.html">Food</a>
+                    <a href="eventi.html">Eventi</a>
+                    <a href="#">Merch</a>
+                    <a href="contact.html">Contatti</a>
+                </div>
+
+                <a href="tel:+393891013881" class="nav-btn hidden md:block bg-[#1a4b9f] text-white px-6 py-2.5 rounded-full font-label-sm uppercase tracking-wider scale-95 active:scale-90 transition-transform">
+                    Prenota Ora
+                </a>
+
+                <button id="menu-toggle" class="nav-hamburger md:hidden p-1" aria-label="Apri menu">
+                    <span class="material-symbols-outlined" id="menu-icon">menu</span>
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Mobile overlay -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+        <nav class="flex flex-col items-center gap-10">
+            <a class="mobile-menu-link" href="index.html">Home</a>
+            <a class="mobile-menu-link" href="servizi.html">Servizi</a>
+            <a class="mobile-menu-link" href="esperienze_copia.html">Esperienze</a>
+            <a class="mobile-menu-link" href="food_V1.html">Food</a>
+            <a class="mobile-menu-link" href="eventi.html">Eventi</a>
+            <a class="mobile-menu-link" href="#">Merch</a>
+            <a class="mobile-menu-link" href="contact.html">Contatti</a>
+        </nav>
+        <a href="tel:+393891013881" class="mobile-prenota-btn mt-10 bg-[#1a4b9f] text-white px-10 py-4 rounded-full font-label-sm uppercase tracking-widest">
+            Prenota Ora
+        </a>
+    </div>
+
+    <main>
+
+        <!-- ===================== HERO + CAROSELLO PIATTI ===================== -->
+        <section class="relative h-screen w-full">
+            <!-- Background image: split sinistra/destra (mobile: solo prima) -->
+            <div class="absolute inset-0 flex">
+                <div class="hidden lg:block lg:w-1/2 h-full overflow-hidden">
+                    <img
+                        class="w-full h-full object-cover"
+                        style="transform: scaleX(-1);"
+                        src="/static/img/staff/2_Mezzo_Hero_Staff.jpg"
+                        alt="Staff Grotte Beach"
+                    />
+                </div>
+                <div class="w-full lg:w-1/2 h-full overflow-hidden">
+                    <img
+                        class="w-full h-full object-cover"
+                        style="transform: scaleX(-1);"
+                        src="/static/img/staff/Mezzo_Hero_Staff.jpg"
+                        alt="Staff Grotte Beach"
+                    />
+                </div>
+            </div>
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            <!-- Testo hero — centrato -->
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+                <div class="text-center px-gutter">
+                    <!-- <span class="fade-up font-label-sm text-white uppercase tracking-[0.3em] mb-2 block" data-delay="200">
+                        COLAZIONE &middot; PRANZO &middot; APERITIVO
+                    </span> -->
+                    <h1 class="fade-up font-display-xl text-white text-5xl md:text-7xl mb-2" data-delay="100">
+                        Food &amp; Drink
+                    </h1>
+                    <span class="fade-up font-label-sm text-white uppercase tracking-[0.3em] mb-2 block" data-delay="200">
+                        COLAZIONE &middot; PRANZO &middot; APERITIVO
+                    </span>
+                    <!-- <h1 class="fade-up font-display-xl text-white text-5xl md:text-7xl mb-6" data-delay="150">
+                        Sale Sole Sapore
+                    </h1> -->
+                    <!-- <p class="fade-up font-body-lg text-white/90 max-w-2xl mx-auto" data-delay="300">
+                        SALE SOLE SAPORE
+                    </p> -->
+                    <p class="fade-up font-body-lg text-white/90 max-w-2xl mx-auto" data-delay="300">
+                        Dal primo sole sulla battigia ai riflessi ambrati del tramonto, scopri un viaggio culinario radicato nel sale, nel sole e nella terra della nostra costa.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ── CAROSELLO PIATTI — dentro la hero, ancorato al fondo, da bordo a bordo ── -->
+            <div class="absolute bottom-0 left-0 right-0 z-10">
+            <div
+                id="dish-carousel"
+                class="flex gap-4 md:gap-5 overflow-x-auto pb-6 pt-2 px-6 scrollbar-hide cursor-grab"
+            >
+
+                    <!-- Card 1: Colazione -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/Colazione.jpg" alt="Colazione Siciliana" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Spuntino</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Granite</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 1.2: Colazione -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/gelato.jpg" alt="Colazione Siciliana" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Mattino</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Gelato</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Antipasto -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/Hero_CIbo.jpg" alt="I nostri piatti" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Antipasto</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Misto di Mare</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Gnocco e Gamberi -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/Pranzo.jpg" alt="Gnocco Al Gambero" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Primo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Gnocco Al Gambero</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Spaghetti -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/Pranzo3.jpg" alt="Spaghetti di Mare" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Primo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Spaghetti di Mare</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Norma -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/norma.jpg" alt="Norma" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Primo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Norma</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Cozze Al Pesto -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/cozzeepesto.jpg" alt="Cozze Al Pesto" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Primo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Cozze Al Pesto</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Aperitivi  -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/Aperitivi3.jpg" alt="Aperitivo" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Aperitivo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Spritz & Food</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 8: Cena -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/involtinispada.png" alt="Involtini Di Spada" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Secondo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Involtini Di Spada</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 9: Secondo -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/cotoletta.JPEG" alt="Cotoletta" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Secondo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Cotoletta</p>
+                        </div>
+                    </div>
+
+                     <!-- Card 10: Secondo -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/fritturamista.jpg" alt="Frittura Mista" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Secondo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Frittura Mista</p>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Card 1: Colazione -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/Colazione.jpg" alt="Colazione Siciliana" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Mattino</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Granite</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 1.2: Colazione -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/gelato.jpg" alt="Colazione Siciliana" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Mattino</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Gelato</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Antipasto -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/Hero_CIbo.jpg" alt="I nostri piatti" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Antipasto</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Misto di Mare</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Gnocco e Gamberi -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/Pranzo.jpg" alt="Gnocco Al Gambero" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Primo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Gnocco Al Gambero</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Spaghetti -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/Pranzo3.jpg" alt="Spaghetti di Mare" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Primo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Spaghetti di Mare</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Norma -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/norma.jpg" alt="Norma" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Primo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Norma</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Cozze Al Pesto -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/cozzeepesto.jpg" alt="Cozze Al Pesto" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Primo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Cozze Al Pesto</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Aperitivi  -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/Aperitivi3.jpg" alt="Aperitivo" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Aperitivo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Spritz & Food</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 8: Secondo -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/involtinispada.png" alt="Involtini Di Spada" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Secondo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Involtini Di Spada</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 9: Secondo -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/cotoletta.JPEG" alt="Cotoletta" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Secondo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Cotoletta</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 10: Secondo -->
+                    <div class="flex-shrink-0 w-[150px] sm:w-[165px] rounded-2xl overflow-hidden bg-white shadow-xl shadow-primary/15 group hover:-translate-y-1.5 transition-transform duration-300">
+                        <div class="h-[140px] overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/static/img/food/fritturamista.jpg" alt="Frittura Mista" draggable="false" />
+                        </div>
+                        <div class="p-3.5">
+                            <span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-container block mb-1">Secondo</span>
+                            <p class="font-['Epilogue'] text-sm font-semibold text-primary leading-snug">Frittura Mista</p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== FILOSOFIA ===================== -->
+        <section class="fade-up py-xl max-w-7xl mx-auto px-gutter">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+                <!-- Citazione -->
+                <div>
+                    <span class="font-label-sm text-on-tertiary-container uppercase tracking-[0.2em] mb-6 block">La nostra filosofia</span>
+                    <blockquote class="font-['Epilogue'] text-4xl md:text-5xl font-light italic text-primary leading-snug">
+                        "Il sole decide il menù, il mare la ricetta."
+                    </blockquote>
+                </div>
+
+                <!-- Descrizione + ancora rapida al momento del giorno -->
+                <div>
+                    <p class="font-body-lg text-on-surface-variant mb-8">
+                        Ogni giorno la cucina di Grotte Beach segue il ritmo naturale della costa siciliana. Gli ingredienti arrivano dal territorio — pesce fresco dai pescatori locali, capperi delle Eolie, agrumi della costa tirrenica — e la nostra proposta cambia con le stagioni e il pescato.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#colazione" class="px-5 py-2.5 rounded-full border border-primary/20 font-label-sm uppercase text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            08:00 — Colazione
+                        </a>
+                        <a href="#pranzo" class="px-5 py-2.5 rounded-full border border-primary/20 font-label-sm uppercase text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            12:30 — Pranzo
+                        </a>
+                        <a href="#aperitivo" class="px-5 py-2.5 rounded-full border border-primary/20 font-label-sm uppercase text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            17:30 — Aperitivo
+                        </a>
+                        <a href="#cena" class="px-5 py-2.5 rounded-full border border-primary/20 font-label-sm uppercase text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            19:00 — Cena
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== 01 — COLAZIONE ===================== -->
+        <section id="colazione" class="fade-up overflow-hidden">
+            <div class="flex flex-col lg:flex-row">
+
+                <!-- Immagine SX -->
+                <div class="lg:w-1/2 relative flex-shrink-0 h-72 lg:h-auto overflow-hidden">
+                    <img
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                        src="/static/img/food/Colazione.jpg"
+                        alt="Colazione a Grotte Beach"
+                    />
+                    <div class="absolute top-5 left-5 bg-white/90 backdrop-blur-sm rounded-full px-5 py-2 shadow-sm">
+                        <span class="font-label-sm text-primary uppercase tracking-widest">08:00 — 11:00</span>
+                    </div>
+                </div>
+
+                <!-- Contenuto DX -->
+                <div class="lg:w-1/2 bg-[#F2EEE9] px-12 xl:px-20 py-xl">
+                    <div>
+
+                        <div class="relative mb-4">
+                            <span class="absolute -top-8 -left-3 font-['Epilogue'] text-[130px] font-bold text-primary/[0.04] leading-none select-none pointer-events-none">01</span>
+                            <span class="font-label-sm text-on-tertiary-container uppercase tracking-[0.2em] mb-3 block">Buongiorno</span>
+                            <h2 class="font-headline-lg text-headline-lg text-primary">Colazione</h2>
+                        </div>
+
+                        <p class="font-body-lg text-on-surface-variant mb-4">
+                            Il giorno inizia con l'aroma del caffè siciliano e il rumore delle onde. Granite rinfrescanti, cornetti appena sfornati, frutta di stagione e succhi freschi serviti direttamente sulla terrazza affacciata sul mare.
+                        </p>
+
+                        <div class="mb-4">
+                            <h3 class="font-label-sm uppercase tracking-widest text-primary/50 mb-3">Alcune proposte</h3>
+                            <div class="space-y-0">
+                                <div class="flex justify-between items-baseline py-2 border-b border-primary/10">
+                                    <span class="font-['Epilogue'] text-primary font-light">Granita Limone</span>
+                                    <span class="font-label-sm text-on-surface-variant ml-6 flex-shrink-0">€ 2,30</span>
+                                </div>
+                                <div class="flex justify-between items-baseline py-2 border-b border-primary/10">
+                                    <span class="font-['Epilogue'] text-primary font-light">Brioche</span>
+                                    <span class="font-label-sm text-on-surface-variant ml-6 flex-shrink-0">€ 1,30</span>
+                                </div>
+                                <div class="flex justify-between items-baseline py-2 border-b border-primary/10">
+                                    <span class="font-['Epilogue'] text-primary font-light">Toast con burro, miele e marmellata</span>
+                                    <span class="font-label-sm text-on-surface-variant ml-6 flex-shrink-0">€ 3,00</span>
+                                </div>
+                                <div class="flex justify-between items-baseline py-2 border-b border-primary/10">
+                                    <span class="font-['Epilogue'] text-primary font-light">Cappuccino</span>
+                                    <span class="font-label-sm text-on-surface-variant ml-6 flex-shrink-0">€ 2,50</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 shadow-sm flex items-center justify-between gap-4 flex-wrap">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-[#F2EEE9] flex items-center justify-center flex-shrink-0">
+                                    <span class="material-symbols-outlined text-2xl text-primary">menu_book</span>
+                                </div>
+                                <div>
+                                    <p class="font-['Epilogue'] font-semibold text-primary text-base leading-tight">Men&ugrave; completo</p>
+                                    <p class="text-xs text-on-surface-variant">Disponibile in Italiano &amp; English</p>
+                                </div>
+                            </div>
+                            <button
+                                class="vedi-menu-btn bg-primary text-white px-7 py-3 rounded-full font-label-sm uppercase tracking-wider hover:bg-primary/90 active:scale-95 transition-all"
+                                data-service="colazione"
+                            >
+                                Vedi Men&ugrave;
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== 02 — PRANZO ===================== -->
+        <section id="pranzo" class="fade-up overflow-hidden">
+            <div class="flex flex-col lg:flex-row-reverse">
+
+                <!-- Immagine DX -->
+                <div class="lg:w-1/2 relative flex-shrink-0 h-72 lg:h-auto overflow-hidden">
+                    <img
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                        src="/static/img/food/pasta.jpg"
+                        alt="Pranzo a Grotte Beach"
+                    />
+                    <div class="absolute top-5 right-5 bg-white/90 backdrop-blur-sm rounded-full px-5 py-2 shadow-sm">
+                        <span class="font-label-sm text-primary uppercase tracking-widest">12:30 — 15:30</span>
+                    </div>
+                </div>
+
+                <!-- Contenuto SX -->
+                <div class="lg:w-1/2 bg-surface-container-lowest px-12 xl:px-20 py-xl">
+                    <div>
+
+                        <div class="relative mb-4">
+                            <span class="absolute -top-8 -left-3 font-['Epilogue'] text-[130px] font-bold text-primary/[0.04] leading-none select-none pointer-events-none">02</span>
+                            <span class="font-label-sm text-on-tertiary-container uppercase tracking-[0.2em] mb-3 block">Buon Appetito</span>
+                            <h2 class="font-headline-lg text-headline-lg text-primary">Pranzo</h2>
+                        </div>
+
+                        <p class="font-body-lg text-on-surface-variant mb-4">
+                            Quando il sole è alto e il mare invita alla pausa. Primi di mare e di terra preparati con ciò che arriva al mattino dal porto, insalatone fresche, panini piastrati e piatti del giorno sempre diversi.
+                        </p>
+
+                        <div class="mb-4">
+                            <h3 class="font-label-sm uppercase tracking-widest text-primary/50 mb-3">Alcune proposte</h3>
+                            <div class="space-y-0">
+                                <div class="flex justify-between items-baseline py-2 border-b border-primary/10">
+                                    <span class="font-['Epilogue'] text-primary font-light">Pasta al pomodoro</span>
+                                    <span class="font-label-sm text-on-surface-variant ml-6 flex-shrink-0">€ 6,00</span>
+                                </div>
+                                <div class="flex justify-between items-baseline py-2 border-b border-primary/10">
+                                    <span class="font-['Epilogue'] text-primary font-light">Pasta Alla Norma</span>
+                                    <span class="font-label-sm text-on-surface-variant ml-6 flex-shrink-0">€ 7,50</span>
+                                </div>
+                                <div class="flex justify-between items-baseline py-2 border-b border-primary/10">
+                                    <span class="font-['Epilogue'] text-primary font-light">Pasta Alle Vongole</span>
+                                    <span class="font-label-sm text-on-surface-variant ml-6 flex-shrink-0">€ 9,50</span>
+                                </div>
+                                <div class="flex justify-between items-baseline py-2 border-b border-primary/10">
+                                    <span class="font-['Epilogue'] text-primary font-light">Primo Dello Chef</span>
+                                    <span class="font-label-sm text-on-surface-variant ml-6 flex-shrink-0">da € 10,50</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 shadow-sm flex items-center justify-between gap-4 flex-wrap">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-[#F2EEE9] flex items-center justify-center flex-shrink-0">
+                                    <span class="material-symbols-outlined text-2xl text-primary">menu_book</span>
+                                </div>
+                                <div>
+                                    <p class="font-['Epilogue'] font-semibold text-primary text-base leading-tight">Men&ugrave; completo</p>
+                                    <p class="text-xs text-on-surface-variant">Disponibile in Italiano &amp; English</p>
+                                </div>
+                            </div>
+                            <button
+                                class="vedi-menu-btn bg-primary text-white px-7 py-3 rounded-full font-label-sm uppercase tracking-wider hover:bg-primary/90 active:scale-95 transition-all"
+                                data-service="pranzo"
+                            >
+                                Vedi Men&ugrave;
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== 03 — APERITIVO ===================== -->
+        <section id="aperitivo" class="fade-up overflow-hidden">
+            <div class="flex flex-col lg:flex-row">
+
+                <!-- Immagine SX -->
+                <div class="lg:w-1/2 relative flex-shrink-0 h-72 lg:h-auto overflow-hidden">
+                    <img
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                        src="/static/img/food/Aperitivi3.jpg"
+                        alt="Aperitivo al tramonto a Grotte Beach"
+                    />
+                    <div class="absolute top-5 left-5 bg-white/90 backdrop-blur-sm rounded-full px-5 py-2 shadow-sm">
+                        <span class="font-label-sm text-primary uppercase tracking-widest">17:30 — 20:00</span>
+                    </div>
+                </div>
+
+                <!-- Contenuto DX -->
+                <div class="lg:w-1/2 bg-[#F2EEE9] px-12 xl:px-20 py-xl">
+                    <div>
+
+                        <div class="relative mb-4">
+                            <span class="absolute -top-8 -left-3 font-['Epilogue'] text-[130px] font-bold text-primary/[0.04] leading-none select-none pointer-events-none">03</span>
+                            <span class="font-label-sm text-on-tertiary-container uppercase tracking-[0.2em] mb-3 block">Il tramonto</span>
+                            <h2 class="font-headline-lg text-headline-lg text-primary">Aperitivo</h2>
+                        </div>
+
+                        <p class="font-body-lg text-on-surface-variant mb-4">
+                            Mentre il sole scende lento sulle Isole Eolie, il bar di Grotte si anima. Cocktail artigianali, vini locali, birre selezionate e un ricco tagliere siciliano per accompagnare l'ora più bella della giornata.
+                        </p>
+
+                        <div class="mb-4">
+                            <h3 class="font-label-sm uppercase tracking-widest text-primary/50 mb-3">Alcune proposte</h3>
+                            <div class="space-y-0">
+                                <div class="flex justify-between items-baseline py-2 border-b border-primary/10">
+                                    <span class="font-['Epilogue'] text-primary font-light">Grotte Beach</span>
+                                    <span class="font-label-sm text-on-surface-variant ml-6 flex-shrink-0">€ 4,50</span>
+                                </div>
+                                <div class="flex justify-between items-baseline py-2 border-b border-primary/10">
+                                    <span class="font-['Epilogue'] text-primary font-light">Campari Beach</span>
+                                    <span class="font-label-sm text-on-surface-variant ml-6 flex-shrink-0">€ 4,50</span>
+                                </div>
+                                <div class="flex justify-between items-baseline py-2 border-b border-primary/10">
+                                    <span class="font-['Epilogue'] text-primary font-light">Aperol Spritz</span>
+                                    <span class="font-label-sm text-on-surface-variant ml-6 flex-shrink-0">€ 4,50</span>
+                                </div>
+                                <div class="flex justify-between items-baseline py-2 border-b border-primary/10">
+                                    <span class="font-['Epilogue'] text-primary font-light">Vodka Sicily</span>
+                                    <span class="font-label-sm text-on-surface-variant ml-6 flex-shrink-0">€ 6,00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 shadow-sm flex items-center justify-between gap-4 flex-wrap">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-[#F2EEE9] flex items-center justify-center flex-shrink-0">
+                                    <span class="material-symbols-outlined text-2xl text-primary">menu_book</span>
+                                </div>
+                                <div>
+                                    <p class="font-['Epilogue'] font-semibold text-primary text-base leading-tight">Men&ugrave; completo</p>
+                                    <p class="text-xs text-on-surface-variant">Disponibile in Italiano &amp; English</p>
+                                </div>
+                            </div>
+                            <button
+                                class="vedi-menu-btn bg-primary text-white px-7 py-3 rounded-full font-label-sm uppercase tracking-wider hover:bg-primary/90 active:scale-95 transition-all"
+                                data-service="aperitivo"
+                            >
+                                Vedi Men&ugrave;
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== 04 — CENA (solo prenotazione) ===================== -->
+        <section id="cena" class="fade-up py-16 bg-primary">
+            <div class="max-w-7xl mx-auto px-gutter">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-16">
+
+                    <!-- Testo -->
+                    <div class="max-w-xl">
+                        <div class="relative mb-6">
+                            <span class="absolute -top-8 -left-3 font-['Epilogue'] text-[130px] font-bold text-white/[0.04] leading-none select-none pointer-events-none">04</span>
+                            <span class="font-label-sm text-white/40 uppercase tracking-[0.2em] mb-3 block">Un momento unico</span>
+                            <h2 class="font-headline-lg text-headline-lg text-white">Cena</h2>
+                        </div>
+
+                        <p class="font-body-lg text-white/75 mb-4">
+                            Le cene a Grotte Beach sono un'esperienza intima e curata. Il menù viene proposto direttamente dal nostro Chef in base al pescato del giorno e agli ingredienti di stagione.
+                        </p>
+                        <p class="font-body-md text-white/50 mb-6">
+                            Non esiste un menù fisso: ogni sera è una storia diversa. Contattaci per organizzare la tua serata.
+                        </p>
+
+                        <div class="flex flex-wrap gap-4">
+                            <a href="tel:+393891013881" class="bg-white text-primary px-10 py-4 rounded-full font-label-sm uppercase tracking-widest hover:bg-[#F2EEE9] transition-all">
+                                Prenota Una Cena
+                            </a>
+                            <a href="tel:+393891013881" class="border border-white/25 text-white px-8 py-4 rounded-full font-label-sm uppercase tracking-widest hover:border-white/60 transition-all">
+                                Contattaci
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Immagine inquadrata -->
+                    <div class="relative w-full lg:w-[460px] flex-shrink-0">
+                        <div class="rounded-2xl overflow-hidden h-[380px] shadow-2xl">
+                            <img
+                                class="w-full h-full object-cover"
+                                src="/static/img/food/fritturamista.jpg"
+                                alt="Cena a Grotte Beach"
+                            />
+                        </div>
+                        <!-- Badge floating -->
+                        <div class="absolute -bottom-5 -left-5 bg-white text-primary rounded-2xl px-5 py-4 shadow-2xl flex items-center gap-3">
+                            <span class="material-symbols-outlined text-2xl text-primary">restaurant</span>
+                            <div>
+                                <div class="font-label-sm uppercase text-xs text-primary">Solo su prenotazione</div>
+                                <div class="font-['Epilogue'] text-sm font-light text-on-surface-variant">Menù proposto sul momento</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== Piatti più venduti ===================== -->
+        <section class="fade-up py-xl bg-[#F2EEE9]">
+            <div class="max-w-7xl mx-auto px-gutter">
+
+                <div class="text-center mb-16">
+                    <span class="font-label-sm text-on-tertiary-container uppercase tracking-[0.2em] mb-4 block">Il nostro territorio</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-4">I 5 Piatti Più Venduti</h2>
+                    <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        Ogni piatto nasce da una radice precisa. Questi sono i cinque piatti più amati dai nostri clienti.
+                    </p>
+                    <div class="w-20 h-px bg-black/20 mx-auto mt-8"></div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-12 gap-x-6">
+
+                    <!-- 1. Pasta Alla Norma -->
+                    <!-- Immagine: /static/img/food/ingr_tonno.jpg -->
+                    <div class="group flex flex-col items-center text-center">
+                        <div class="w-36 h-36 pebble-mask overflow-hidden mb-5 transition-transform duration-500 group-hover:scale-105 shadow-lg bg-surface-container-lowest">
+                            <img class="w-full h-full object-cover" src="/static/img/food/norma.jpg" alt="Pasta Alla Norma" />
+                        </div>
+                        <span class="font-label-sm text-[10px] text-on-tertiary-container uppercase tracking-widest bg-tertiary-fixed/50 px-3 py-0.5 rounded-full mb-2">Primo di Terra</span>
+                        <h3 class="font-['Epilogue'] font-semibold text-lg text-primary mt-1 mb-1">Pasta Alla Norma</h3>
+                        <p class="text-xs text-on-surface-variant font-body-md leading-relaxed max-w-[140px]">Rigatoni con salsa di pomodoro, melanzane fritte, ricotta inforata e basilico.</p>
+                    </div>
+
+                    <!-- 2. Pasta Alle Vongole -->
+                    <!-- Immagine: /static/img/food/ingr_capperi.jpg -->
+                    <div class="group flex flex-col items-center text-center">
+                        <div class="w-36 h-36 pebble-mask overflow-hidden mb-5 transition-transform duration-500 group-hover:scale-105 shadow-lg bg-surface-container-lowest">
+                            <img class="w-full h-full object-cover" src="/static/img/food/vongole.JPG" alt="Pasta Alle Vongole" />
+                        </div>
+                        <span class="font-label-sm text-[10px] text-on-tertiary-container uppercase tracking-widest bg-tertiary-fixed/50 px-3 py-0.5 rounded-full mb-2">Primo di Mare</span>
+                        <h3 class="font-['Epilogue'] font-semibold text-lg text-primary mt-1 mb-1">Spaghetti Alle Vongole</h3>
+                        <p class="text-xs text-on-surface-variant font-body-md leading-relaxed max-w-[140px]">Spaghetti, vongole, aglio, prezzemolo.</p>
+                    </div>
+
+                    <!-- 3. Cotoletta M'panata -->
+                    <!-- Immagine: /static/img/food/ingr_pesce_spada.jpg -->
+                    <div class="group flex flex-col items-center text-center">
+                        <div class="w-36 h-36 pebble-mask overflow-hidden mb-5 transition-transform duration-500 group-hover:scale-105 shadow-lg bg-surface-container-lowest">
+                            <img class="w-full h-full object-cover" src="/static/img/food/cotoletta.JPEG" alt="Cotoletta M'panata" />
+                        </div>
+                        <span class="font-label-sm text-[10px] text-on-tertiary-container uppercase tracking-widest bg-tertiary-fixed/50 px-3 py-0.5 rounded-full mb-2">Secondo di Terra</span>
+                        <h3 class="font-['Epilogue'] font-semibold text-lg text-primary mt-1 mb-1">Cotoletta M'panata</h3>
+                        <p class="text-xs text-on-surface-variant font-body-md leading-relaxed max-w-[140px]">Carne di vitello impanata e fritta.</p>
+                    </div>
+
+                    <!-- 4. Involtini di Pesce Spada -->
+                    <!-- Immagine: /static/img/food/ingr_pistacchio.jpg -->
+                    <div class="group flex flex-col items-center text-center">
+                        <div class="w-36 h-36 pebble-mask overflow-hidden mb-5 transition-transform duration-500 group-hover:scale-105 shadow-lg bg-surface-container-lowest">
+                            <img class="w-full h-full object-cover" src="/static/img/food/involtinispada.png" alt="Involtini di Pesce Spada" />
+                        </div>
+                        <span class="font-label-sm text-[10px] text-on-tertiary-container uppercase tracking-widest bg-tertiary-fixed/50 px-3 py-0.5 rounded-full mb-2">Secondo di Mare</span>
+                        <h3 class="font-['Epilogue'] font-semibold text-lg text-primary mt-1 mb-1">Involtini di Pesce Spada</h3>
+                        <p class="text-xs text-on-surface-variant font-body-md leading-relaxed max-w-[140px]">Pesce spada, mollica di pane, pomodoro, parmigiano, provolone, cacio bianco, pinoli, prezzemolo, aglio, pepe.</p>
+                    </div>
+
+                    <!-- 5. Caprese-->
+                    <!-- Immagine: /static/img/food/ingr_agrumi.jpg -->
+                    <div class="group flex flex-col items-center text-center">
+                        <div class="w-36 h-36 pebble-mask overflow-hidden mb-5 transition-transform duration-500 group-hover:scale-105 shadow-lg bg-surface-container-lowest">
+                            <img class="w-full h-full object-cover" src="/static/img/food/caprese.jpg" alt="Caprese" />
+                        </div>
+                        <span class="font-label-sm text-[10px] text-on-tertiary-container uppercase tracking-widest bg-tertiary-fixed/50 px-3 py-0.5 rounded-full mb-2">Insalatone</span>
+                        <h3 class="font-['Epilogue'] font-semibold text-lg text-primary mt-1 mb-1">Caprese</h3>
+                        <p class="text-xs text-on-surface-variant font-body-md leading-relaxed max-w-[140px]">Pomodori, mozzarella, basilico fresco e olio extravergine d'oliva.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-white dark:bg-slate-950 border-t border-amber-900/10 w-full">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-10 py-20 max-w-7xl mx-auto">
+
+            <!-- Brand -->
+            <div class="space-y-8">
+                <img src="/static/img/Home/logo.svg" alt="Grotte Beach" class="h-20 w-auto object-contain" />
+                <p class="font-['Epilogue'] text-sm font-light leading-relaxed text-slate-800 dark:text-slate-200">
+                    Un locale nel cuore della costa siciliana di Mongiove. Vivi il ritmo della marea e il lusso della natura.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-[#1a4b9f] hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-sm">public</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-[#1a4b9f] hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-sm">photo_camera</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-[#1a4b9f] hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-sm">mail</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="grid grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h5 class="font-label-sm uppercase tracking-widest text-primary">Scopri</h5>
+                    <ul class="space-y-2">
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="#">Location</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="/esperienze_copia.html">Esperienze</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="/food_V1.html">Food</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="servizi.html">Servizi</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="font-label-sm uppercase tracking-widest text-primary">Contatti</h5>
+                    <ul class="space-y-2">
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="https://www.instagram.com/grotte_beach/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="https://www.facebook.com/grottebeachmongiove" target="_blank" rel="noopener">Facebook</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="mailto:grottebeach@yahoo.com">Email</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="tel:+393891013881">Telefono</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="space-y-6">
+                <h5 class="font-label-sm uppercase tracking-widest text-primary">Resta in contatto</h5>
+                <p class="font-['Epilogue'] text-sm font-light text-slate-800">
+                    Aggiornamenti stagionali e accesso esclusivo agli eventi.
+                </p>
+                <form class="flex border-b border-primary/20 focus-within:border-primary transition-all">
+                    <input
+                        class="bg-transparent border-none focus:ring-0 w-full font-label-sm uppercase tracking-wider text-xs py-3 px-0 placeholder:text-slate-400"
+                        placeholder="Indirizzo Email"
+                        type="email"
+                    />
+                    <button class="material-symbols-outlined text-primary" type="submit">trending_flat</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Footer bottom bar -->
+        <div class="max-w-7xl mx-auto px-10 py-10 border-t border-amber-900/5 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-['Epilogue'] text-sm font-light text-slate-500">&copy; 2026 Grotte Beach.</p>
+            <div class="flex gap-6 items-center">
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Sicilia, Italia</span>
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Mongiove - Patti (ME)</span>
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Sviluppato da <strong class="tracking-widest">TEKWORN</strong></span>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- ======= MODAL SELEZIONE LINGUA MENÙ ======= -->
+    <div id="menu-lang-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <!-- Backdrop -->
+        <div id="modal-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <!-- Card -->
+        <div id="modal-card" class="relative bg-white rounded-3xl shadow-2xl w-full max-w-md overflow-hidden transition-all duration-300 scale-95">
+
+            <!-- Header -->
+            <div class="bg-[#F2EEE9] px-8 py-6 flex items-center justify-between">
+                <div>
+                    <span id="modal-service-label" class="font-label-sm text-[10px] uppercase tracking-widest text-on-tertiary-container block mb-1">Menù</span>
+                    <h3 id="modal-title" class="font-['Epilogue'] text-xl font-semibold text-primary">Scegli la lingua</h3>
+                </div>
+                <button id="modal-close" class="w-9 h-9 rounded-full bg-white/70 hover:bg-white transition-colors flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary text-lg">close</span>
+                </button>
+            </div>
+
+            <!-- Step 1: selezione lingua -->
+            <div id="modal-step-lang" class="px-8 py-8">
+                <p class="font-body-md text-sm text-on-surface-variant mb-6">In quale lingua vorresti visualizzare il menù?</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <button class="lang-btn flex flex-col items-center gap-3 p-5 rounded-2xl border-2 border-outline-variant/20 hover:border-primary hover:bg-[#F2EEE9]/50 transition-all group" data-lang="it">
+                        <img src="https://flagcdn.com/it.svg" alt="Bandiera italiana" class="w-12 h-8 object-cover rounded shadow-sm" />
+                        <span class="font-['Epilogue'] text-sm font-semibold text-on-surface group-hover:text-primary tracking-wide">Italiano</span>
+                    </button>
+                    <button class="lang-btn flex flex-col items-center gap-3 p-5 rounded-2xl border-2 border-outline-variant/20 hover:border-primary hover:bg-[#F2EEE9]/50 transition-all group" data-lang="en">
+                        <img src="https://flagcdn.com/gb.svg" alt="British flag" class="w-12 h-8 object-cover rounded shadow-sm" />
+                        <span class="font-['Epilogue'] text-sm font-semibold text-on-surface group-hover:text-primary tracking-wide">English</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2: Vedi Menù (nascosto di default) -->
+            <div id="modal-step-menu" class="px-8 py-8 hidden">
+                <button id="modal-back" class="flex items-center gap-1 text-on-surface-variant hover:text-primary text-xs font-label-sm uppercase tracking-wider mb-6 transition-colors">
+                    <span class="material-symbols-outlined text-sm">arrow_back</span>
+                    <span id="modal-back-label">Cambia lingua</span>
+                </button>
+                <div class="flex flex-col items-center gap-6 py-2">
+                    <p id="modal-lang-label" class="font-['Epilogue'] font-semibold text-primary text-base text-center"></p>
+                    <button id="modal-view-menu-btn" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-label-sm uppercase tracking-wider hover:bg-primary/90 active:scale-95 transition-all">
+                        <span class="material-symbols-outlined text-base">menu_book</span>
+                        <span id="modal-view-label">Vedi Men&ugrave;</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ======= OVERLAY MENÙ — CAROSELLO IMMAGINI ======= -->
+    <div id="menu-img-overlay" class="fixed inset-0 z-[300] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300" role="dialog" aria-modal="true" aria-label="Menù Grotte Beach">
+        <div class="relative bg-white rounded-3xl shadow-2xl w-full max-w-xl overflow-hidden flex flex-col" style="max-height:92vh;">
+
+            <!-- Header -->
+            <div class="flex items-center justify-between px-6 py-4 bg-[#F2EEE9] border-b border-outline-variant/20 flex-shrink-0">
+                <div>
+                    <p id="menu-img-title" class="font-['Epilogue'] font-semibold text-primary text-base"></p>
+                    <p id="menu-img-counter" class="font-label-sm text-[10px] uppercase tracking-widest text-on-tertiary-container mt-0.5"></p>
+                </div>
+                <button id="menu-img-close" class="w-9 h-9 rounded-full bg-white/70 hover:bg-white transition-colors flex items-center justify-center" aria-label="Chiudi menù">
+                    <span class="material-symbols-outlined text-primary text-lg">close</span>
+                </button>
+            </div>
+
+            <!-- Immagine corrente -->
+            <div class="relative flex-1 overflow-hidden bg-[#F2EEE9] flex items-center justify-center">
+                <img
+                    id="menu-img-slide"
+                    src=""
+                    alt="Pagina menù Grotte Beach"
+                    class="max-h-[70vh] w-auto max-w-full object-contain select-none"
+                    draggable="false"
+                />
+                <!-- Prev -->
+                <button id="menu-img-prev" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white shadow flex items-center justify-center transition-colors" aria-label="Pagina precedente">
+                    <span class="material-symbols-outlined text-primary text-xl">chevron_left</span>
+                </button>
+                <!-- Next -->
+                <button id="menu-img-next" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white shadow flex items-center justify-center transition-colors" aria-label="Pagina successiva">
+                    <span class="material-symbols-outlined text-primary text-xl">chevron_right</span>
+                </button>
+            </div>
+
+            <!-- Dots navigazione -->
+            <div id="menu-img-dots" class="flex justify-center gap-2 py-4 flex-shrink-0 flex-wrap px-4"></div>
+
+        </div>
+    </div>
+
+    <!-- food.js: navbar + mobile menu + fade-up + carosello + modal lingua -->
+    <script src="/static/js/food.js"></script>
+
+
+</body>
+</html>

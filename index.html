@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script type="text/javascript" src="https://embeds.iubenda.com/widgets/8f03b1b7-132d-45ce-b90e-ae855eab068f.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error":                    "#ffffff",
+                        "inverse-primary":             "#a8caef",
+                        "primary-container":           "#1a4b9f",
+                        "outline":                     "#73777e",
+                        "on-primary-fixed-variant":    "#274969",
+                        "tertiary-container":          "#073002",
+                        "secondary-fixed-dim":         "#c5c7c8",
+                        "surface-container-highest":   "#e3e2e5",
+                        "surface-dim":                 "#dadadd",
+                        "on-tertiary":                 "#ffffff",
+                        "background":                  "#faf9fc",
+                        "inverse-surface":             "#2f3033",
+                        "on-surface-variant":          "#42474d",
+                        "outline-variant":             "#c3c7ce",
+                        "primary":                     "#1a4b9f",
+                        "on-primary-container":        "#7293b6",
+                        "secondary-container":         "#e1e3e4",
+                        "secondary-fixed":             "#e1e3e4",
+                        "secondary":                   "#5c5f60",
+                        "surface-container":           "#eeedf0",
+                        "on-secondary":                "#ffffff",
+                        "surface":                     "#faf9fc",
+                        "on-background":               "#1a1c1e",
+                        "on-secondary-fixed":          "#191c1d",
+                        "on-primary":                  "#ffffff",
+                        "tertiary-fixed-dim":          "#a4d393",
+                        "surface-bright":              "#faf9fc",
+                        "tertiary":                    "#011900",
+                        "on-secondary-container":      "#626566",
+                        "on-error-container":          "#93000a",
+                        "on-tertiary-fixed-variant":   "#28501e",
+                        "surface-container-lowest":    "#ffffff",
+                        "inverse-on-surface":          "#f1f0f3",
+                        "primary-fixed":               "#cfe5ff",
+                        "surface-variant":             "#e3e2e5",
+                        "on-tertiary-container":       "#6f9b60",
+                        "on-secondary-fixed-variant":  "#454748",
+                        "surface-tint":                "#406182",
+                        "on-surface":                  "#1a1c1e",
+                        "error":                       "#ba1a1a",
+                        "surface-container-low":       "#f4f3f6",
+                        "on-primary-fixed":            "#001d34",
+                        "on-tertiary-fixed":           "#022100",
+                        "error-container":             "#ffdad6",
+                        "surface-container-high":      "#e8e8eb",
+                        "primary-fixed-dim":           "#a8caef",
+                        "tertiary-fixed":              "#c0f0ad"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg:      "0.5rem",
+                        xl:      "0.75rem",
+                        full:    "9999px"
+                    },
+                    spacing: {
+                        lg:              "48px",
+                        xl:              "80px",
+                        xs:              "4px",
+                        gutter:          "24px",
+                        md:              "24px",
+                        sm:              "12px",
+                        base:            "8px",
+                        "container-max": "1280px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Epilogue"],
+                        "body-md":     ["Plus Jakarta Sans"],
+                        "headline-md": ["Epilogue"],
+                        "body-lg":     ["Plus Jakarta Sans"],
+                        "display-xl":  ["Epilogue"],
+                        "label-sm":    ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["48px", { lineHeight: "1.2",  fontWeight: "500" }],
+                        "body-md":     ["16px", { lineHeight: "1.6",  fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "1.3",  fontWeight: "500" }],
+                        "body-lg":     ["18px", { lineHeight: "1.6",  fontWeight: "400" }],
+                        "display-xl":  ["72px", { lineHeight: "1.1",  letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "label-sm":    ["13px", { lineHeight: "1",    letterSpacing: "0.05em",  fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link href="static/css/index.css" rel="stylesheet" />
+
+    <title>Grotte Beach</title>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-white">
+
+    <!-- ===================== TOP NAVIGATION ===================== -->
+    <header class="fade-in fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-white/10 shadow-sm">
+        <nav class="flex justify-between items-center px-8 py-1 w-full">
+
+            <div class="nav-logo tracking-[0.1em] text-[#1a4b9f] dark:text-white">
+                <img src="/static/img/Home/logo.svg" alt="Grotte Beach" class="h-20 w-auto object-contain" />
+            </div>
+
+            <!-- Desktop: links + button | Mobile: hamburger -->
+            <div class="flex items-center gap-6">
+
+                <div class="nav-links hidden md:flex items-center gap-8">
+                    <a class="nav-active" href="index.html">Home</a>
+                    <a href="servizi.html">Servizi</a>
+                    <a href="esperienze_copia.html">Esperienze</a>
+                    <a href="food_V1.html">Food</a>
+                    <a href="eventi.html">Eventi</a>
+                    <a href="#">Merch</a>
+                    <a href="contact.html">Contatti</a>
+                </div>
+
+                <a href="tel:+393891013881" class="nav-btn hidden md:block bg-[#1a4b9f] text-white px-6 py-2.5 rounded-full font-label-sm uppercase tracking-wider scale-95 active:scale-90 transition-transform">
+                    Prenota Ora
+                </a>
+
+                <!-- Hamburger (mobile only) -->
+                <button id="menu-toggle" class="nav-hamburger md:hidden p-1" aria-label="Apri menu">
+                    <span class="material-symbols-outlined" id="menu-icon">menu</span>
+                </button>
+
+            </div>
+
+        </nav>
+
+
+    </header>
+
+    <!-- Mobile full-screen menu overlay (outside header to avoid backdrop-filter containment) -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+        <nav class="flex flex-col items-center gap-10">
+            <a class="mobile-menu-link" href="index.html">Home</a>
+            <a class="mobile-menu-link" href="servizi.html">Servizi</a>
+            <a class="mobile-menu-link" href="esperienze_copia.html">Esperienze</a>
+            <a class="mobile-menu-link" href="food_V1.html">Food</a>
+            <a class="mobile-menu-link" href="eventi.html">Eventi</a>
+            <a class="mobile-menu-link" href="#">Merch</a>
+            <a class="mobile-menu-link" href="contact.html">Contatti</a>
+        </nav>
+        <a href="tel:+393891013881" class="mobile-prenota-btn mt-10 bg-[#1a4b9f] text-white px-10 py-4 rounded-full font-label-sm uppercase tracking-widest">
+            Prenota Ora
+        </a>
+    </div>
+
+    <main>
+
+        <!-- ===================== HERO SECTION ===================== -->
+        <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+
+            <!-- Background image  header1 e 2 e 3 si-->
+            <div class="absolute inset-0 z-0">
+                <img
+                    class="w-full h-full object-cover"
+                    src="/static/img/Home/giorno.jpeg"
+                    alt="Spiaggia di Mongiove al tramonto"
+                />
+                <div class="absolute inset-0 bg-black/40"></div>
+            </div>
+
+            <!-- Hero content -->
+            <div class="relative z-10 text-center px-gutter container-max mx-auto">
+                <h1 class="fade-up font-display-xl text-white text-5xl md:text-7xl mb-2" data-delay="150" style="font-family:'Pristina',cursive;">
+                    <img src="/static/img/logobianco.svg" alt="Grotte Beach" class="h-24 md:h-36 w-auto mx-auto object-contain drop-shadow-xl" />
+                </h1>
+                <span class="fade-up font-label-sm text-white uppercase tracking-[0.4em] mb-6 block drop-shadow-md">
+                    Un piccolo paradiso della Sicilia
+                </span>
+                <!-- <h1 class="fade-up font-display-xl text-white mb-8 max-w-4xl mx-auto leading-none" data-delay="150">
+                    Scopri la pace della <span class="text-white italic font-light">costa</span>
+                </h1> -->
+                <div class="fade-up flex flex-col md:flex-row gap-4 justify-center items-center" data-delay="300">
+                    <button class="px-10 py-4 bg-[#1a4b9f] text-white rounded-full font-label-sm uppercase tracking-widest hover:bg-primary transition-colors shadow-xl" onclick="window.location.href='servizi.html'">
+                        Esplora I Servizi
+                    </button>
+                    <button class="px-10 py-4 border-2 border-white text-white rounded-full font-label-sm uppercase tracking-widest hover:bg-white/10 backdrop-blur-sm transition-all" onclick="window.location.href='esperienze_copia.html'">
+                        Vedi Esperienze
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-12 left-1/2 -translate-x-1/2">
+                <div class="fade-up flex flex-col items-center gap-2">
+                    <span class="font-label-sm text-white/60 uppercase tracking-widest">Scorri in basso</span>
+                    <div class="w-px h-12 bg-white/30 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-white translate-y-full animate-bounce"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ===================== ABOUT SECTION ===================== -->
+        <section class="fade-up flex flex-col lg:flex-row min-h-screen lg:min-h-[88vh] bg-[#F2EEE9]"> 
+
+            <!-- Text half -->
+            <div class="lg:w-1/2 flex items-center justify-center py-16 px-10 lg:px-16 xl:px-24">
+                <div class="space-y-8 max-w-lg">
+                    <div class="space-y-4">
+                        <span class="font-label-sm text-on-tertiary-container uppercase tracking-widest flex items-center gap-3">
+                            <span class="w-8 h-px bg-on-tertiary-container"></span>
+                            About Us
+                        </span>
+                        <h2 class="font-headline-lg text-primary">La Nostra Storia</h2>
+                    </div>
+
+                    <p class="font-body-lg text-xl leading-relaxed text-on-surface-variant">
+                        Grotte Beach nasce nel 1996, ai piedi del monte Giove, difronte alle Isole Eolie, nella riserva naturale di Tindari.<br />
+                        Grotte Beach &egrave; un locale per le famiglie e per i giovani, da generazioni, che riscalda l'animo e trasmette il senso della tradizione.<br />
+                        Sin dal mattino la cortesia, la cura del particolare e il contatto diretto con il mare, donano uno straordinario benessere e una dolce tranquillit&agrave; all'ospite
+                        accompagnandolo fino alla sera nel fresco della brezza del tramonto.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="flex gap-12 pt-4">
+                        <div class="fade-up" data-delay="100">
+                            <div class="font-headline-md text-primary mb-1">1996</div>
+                            <div class="font-label-sm text-on-surface-variant/60 uppercase">Fondato</div>
+                        </div>
+                        <div class="fade-up" data-delay="250">
+                            <div class="font-headline-md text-primary mb-1">30 anni</div>
+                            <div class="font-label-sm text-on-surface-variant/60 uppercase">Esperienza</div>
+                        </div>
+                        <div class="fade-up" data-delay="400">
+                            <div class="font-headline-md text-primary mb-1">4,4</div>
+                            <div class="flex items-center gap-0.5 mt-1">
+                                <span class="text-amber-400 text-base">&#9733;</span>
+                                <span class="text-amber-400 text-base">&#9733;</span>
+                                <span class="text-amber-400 text-base">&#9733;</span>
+                                <span class="text-amber-400 text-base">&#9733;</span>
+                                <span class="relative inline-block text-slate-300 text-base">
+                                    &#9733;<span class="absolute inset-0 overflow-hidden text-amber-400" style="width: 55%">&#9733;</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video half -->
+            <div class="relative lg:w-1/2 min-h-[50vh] lg:min-h-0 overflow-hidden">
+                <video
+                    class="absolute inset-0 w-full h-full object-cover"
+                    src="/static/videos/video_aboutus.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                ></video>
+            </div>
+
+        </section>
+        
+        
+
+
+        <!-- ===================== EXPERIENCE CARDS ===================== -->
+        <section class="fade-up min-h-screen flex flex-col justify-center py-xl bg-white">
+        <div class="px-gutter container-max mx-auto w-full">
+
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="font-headline-lg text-primary mb-4">Scopri Grotte Beach</h2>
+                    <p class="font-body-lg text-on-surface-variant">Che tu stia cercando una caletta tranquilla o un pomeriggio vivace tra mare e cocktail, qui ti aspetta il posto giusto.</p>
+                </div>
+                <button onclick="window.location.href='esperienze_copia.html'" class="flex items-center gap-2 font-label-sm uppercase tracking-widest text-primary border-b border-primary/20 pb-2 hover:border-primary transition-all">
+                    Vedi tutte le esperienze
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Card: Attivita -->
+                <div class="experience-card group relative md:col-span-1 h-[600px] overflow-hidden rounded-[2rem] bg-surface-container-low shadow-sm cursor-pointer" data-href="esperienze_copia.html">
+                    <img
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="/static/img/galleria_esperienze/canoa_faraglione.jpeg"
+                        alt="Kayak nelle acque cristalline"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 p-10 w-full">
+                        <span class="inline-block px-4 py-1 bg-white/20 backdrop-blur-md rounded-full text-white font-label-sm uppercase tracking-widest mb-4">Attivit&agrave;</span>
+                        <h3 class="font-headline-md text-white mb-4">Una spiaggia da scoprire</h3>
+                        <p class="card-p-hide text-white/80 font-body-md mb-0 group-hover:mb-6 max-h-0 overflow-hidden group-hover:max-h-32 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            Esplora le grotte di Mongiove e il mare cristallino
+                        </p>
+                        <button class="card-btn w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center group-hover:w-full group-hover:justify-between px-4 transition-all duration-500">
+                            <span class="card-btn-label hidden group-hover:block font-label-sm uppercase tracking-widest">Scopri di pi&ugrave;</span>
+                            <span class="material-symbols-outlined">arrow_outward</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card: Food -->
+                <div class="experience-card group relative md:col-span-1 h-[600px] overflow-hidden rounded-[2rem] bg-surface-container-low shadow-sm" data-href="food_V1.html">
+                    <img
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="/static/img/Food-GrotteBeach.jpg"
+                        alt="Piatti della cucina mediterranea"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 p-10 w-full">
+                        <span class="inline-block px-4 py-1 bg-white/20 backdrop-blur-md rounded-full text-white font-label-sm uppercase tracking-widest mb-4">Food</span>
+                        <h3 class="font-headline-md text-white mb-4">Dalla colazione alla cena</h3>
+                        <p class="card-p-hide text-white/80 font-body-md mb-0 group-hover:mb-6 max-h-0 overflow-hidden group-hover:max-h-32 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            I sapori mediterranei e la tradizione faranno sciogliere il tuo cuore.
+                        </p>
+                        <button class="card-btn w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center group-hover:w-full group-hover:justify-between px-4 transition-all duration-500">
+                            <span class="card-btn-label hidden group-hover:block font-label-sm uppercase tracking-widest">Vedi il men&ugrave;</span>
+                            <span class="material-symbols-outlined">arrow_outward</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card: Servizi -->
+                <div class="experience-card group relative md:col-span-1 h-[600px] overflow-hidden rounded-[2rem] bg-surface-container-low shadow-sm" data-href="servizi.html">
+                    <img
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src="/static/img/EscursioniBarca2.png"
+                        alt="Oasi privata Grotte Beach"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 p-10 w-full">
+                        <span class="inline-block px-4 py-1 bg-[#A4D393] rounded-full text-primary font-label-sm uppercase tracking-widest mb-4">Servizi</span>
+                        <h3 class="font-headline-md text-white mb-4">Prezzi &amp; Info</h3>
+                        <p class="card-p-hide text-white/80 font-body-md mb-0 group-hover:mb-6 max-h-0 overflow-hidden group-hover:max-h-32 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            Informazioni su prezzi e orari per i noleggi
+                        </p>
+                        <button class="card-btn w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center group-hover:w-full group-hover:justify-between px-4 transition-all duration-500">
+                            <span class="card-btn-label hidden group-hover:block font-label-sm uppercase tracking-widest"><a href="servizi.html">Maggiori Info</a></span>
+                            <span class="material-symbols-outlined">arrow_outward</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </section>
+
+        <!-- ===================== EREDITÀ MEDITERRANEA ===================== -->
+        <section class="fade-up overflow-hidden bg-[#faf9f8] py-xl">
+
+            <!-- Split: testo sinistra, immagine destra -->
+            <div class="flex flex-col lg:flex-row" style="min-height: 88vh;">
+
+                <!-- Pannello testo -->
+                <div class="relative z-10 lg:w-[45%] flex flex-col justify-center py-20 px-10 lg:px-16 xl:px-24 bg-[#faf9f8]">
+
+                    <!-- Badge logo -->
+                    <!-- <div class="mb-8">
+                        <img
+                            src="/static/img/Home/LogogrotteNosfondo.png"
+                            alt="Logo Grotte Beach"
+                            class="w-44 h-44 object-contain"
+                        />
+                    </div> -->
+
+                    <!-- Eyebrow -->
+                    <span class="font-label-sm text-[#1a4b9f] uppercase tracking-[0.3em] mb-5 block">Mongiove &middot; Sicilia</span>
+
+                    <!-- Headline serif -->
+                    <h2 class="text-4xl lg:text-5xl xl:text-[3.5rem] font-bold text-[#1a4b9f] leading-tight mb-8" style="font-family: 'Libre Baskerville', Georgia, serif;">
+                        Tradizione<br>Mediterranea<br>dal 1996
+                    </h2>
+
+                    <!-- Body -->
+                    <p class="font-body-lg text-on-surface-variant leading-relaxed mb-10 max-w-md">
+                        Da trent'anni accogliamo famiglie e viaggiatori sulle rive del Tirreno, tra le acque cristalline del mare di Mongiove e della Riserva Naturale di Marinello. Qui la tradizione siciliana si fonde con la bellezza del mare, regalando momenti autentici che restano nel cuore.
+                    </p>
+
+                    <!-- CTAs -->
+                    <!-- <div class="flex flex-wrap gap-4">
+                        <a href="tel:+393891013881"
+                           class="inline-flex items-center gap-2 px-8 py-3.5 bg-[#1a4b9f] text-white font-label-sm uppercase tracking-widest rounded hover:bg-[#153d85] transition-colors shadow-md">
+                            Prenota Ora
+                            <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+                        </a>
+                        <a href="esperienze_copia.html"
+                           class="inline-flex items-center gap-2 px-8 py-3.5 border border-[#1a4b9f] text-[#1a4b9f] font-label-sm uppercase tracking-widest rounded hover:bg-[#1a4b9f]/5 transition-colors">
+                            Scopri la Nostra Storia
+                        </a>
+                    </div> -->
+
+                </div>
+
+                <!-- Pannello immagine -->
+                <div class="relative lg:w-[55%] min-h-[60vw] lg:min-h-0 overflow-hidden">
+                    <!-- Sfumatura laterale sinistra per blend morbido (desktop) -->
+                    <div class="absolute left-0 inset-y-0 w-40 z-10 hidden lg:block pointer-events-none"
+                         style="background: linear-gradient(to right, #faf9f8, transparent);"></div>
+                    <img
+                        src="/static/img/Home/Fotostoria.png"
+                        alt="Grotte Beach — la nostra storia"
+                        class="absolute inset-0 w-full h-full object-cover"
+                        style="filter: sepia(18%) saturate(0.88) brightness(0.96);"
+                    />
+                </div>
+
+            </div>
+
+        </section>
+        <!-- ===================== fine EREDITÀ MEDITERRANEA ===================== -->
+
+        <!-- ===================== IL LOCALE ===================== -->
+        <section class="locale-split fade-up relative overflow-hidden">
+
+            <!-- Immagine mobile (visibile solo su schermi < lg) -->
+            <div class="lg:hidden w-full" style="height: 52vw; min-height: 240px; max-height: 420px;">
+                <img
+                    class="w-full h-full object-cover"
+                    src="/static/img/header2.jpg"
+                    alt="Il locale Grotte Beach — giardino, spiaggia e bar"
+                />
+            </div>
+
+            <!-- Immagine desktop (posizione assoluta, dietro a tutto) -->
+            <div class="locale-split__bg hidden lg:block absolute inset-0 z-0">
+                <img
+                    class="w-full h-full object-cover"
+                    src="/static/img/header2.jpg"
+                    alt="Il locale Grotte Beach — giardino, spiaggia e bar"
+                />
+                <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+
+            <!--
+                Maschera diagonale (desktop only): copre il lato destro con il
+                colore surface, creando il taglio \ tra foto e testo.
+                top  → parte al 48% (immagine visibile 0–48%)
+                bottom → parte al 58% (immagine visibile 0–58%)
+            -->
+            <div class="locale-split__mask hidden lg:block absolute inset-0 z-10 bg-[#F2EEE9] pointer-events-none"></div>
+
+            <!-- Contenuto -->
+            <div class="relative z-20 flex flex-col lg:flex-row lg:min-h-[88vh]">
+
+                <!-- Spacer sinistro desktop: lascia respiro all'immagine fino alla fine della diagonale -->
+                <div class="hidden lg:block lg:w-[58%] flex-shrink-0"></div>
+
+                <!-- Pannello testo (destra) -->
+                <div class="locale-split__panel flex-1 bg-[#F2EEE9] flex items-center py-16 px-8 lg:px-14 xl:px-20">
+                    <div class="max-w-lg w-full space-y-10">
+
+                        <!-- Intestazione -->
+                        <div class="space-y-4">
+                            <span class="font-label-sm text-on-tertiary-container uppercase tracking-widest flex items-center gap-3">
+                                <span class="w-10 h-px bg-current opacity-50 inline-block"></span>
+                                Il Locale
+                            </span>
+                            <h2 class="font-headline-lg text-primary leading-tight">Tre anime,<br>un'unica oasi</h2>
+                            <p class="font-body-lg text-on-surface-variant">
+                                Scopri i tre cuori di Grotte Beach: ogni angolo racconta una storia di mare, natura e convivialità.
+                            </p>
+                        </div>
+
+                        <!-- Tre zone -->
+                        <div class="space-y-7">
+
+                            <!-- Giardino Privato -->
+                            <div class="flex items-start gap-5 group">
+                                <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-surface-container flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                                    <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">park</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-headline-md text-[20px] font-semibold text-primary mb-1">Giardino Privato</h4>
+                                    <p class="font-body-md text-on-surface-variant">Un'oasi verde riparata dal sole, ideale per rilassarsi all'ombra degli ulivi godendo del panorama sul mare.</p>
+                                </div>
+                            </div>
+
+                            <!-- Spiaggia -->
+                            <div class="flex items-start gap-5 group">
+                                <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-surface-container flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                                    <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">beach_access</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-headline-md text-[20px] font-semibold text-primary mb-1">Spiaggia</h4>
+                                    <p class="font-body-md text-on-surface-variant">Sabbia fine e mare cristallino nella riserva naturale di Tindari, a pochi metri dal locale.</p>
+                                </div>
+                            </div>
+
+                            <!-- Zona Bar -->
+                            <div class="flex items-start gap-5 group">
+                                <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-surface-container flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                                    <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">local_bar</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-headline-md text-[20px] font-semibold text-primary mb-1">Zona Bar e Ristoro</h4>
+                                    <p class="font-body-md text-on-surface-variant">Cocktail, granite siciliane e piatti tipici dal mattino al tramonto, con il Tirreno come unico sfondo.</p>
+                                </div>
+                            </div>
+
+                        </div><!-- /zone -->
+
+                        
+                    </div>
+                </div><!-- /pannello testo -->
+
+            </div><!-- /contenuto -->
+
+        </section>
+        <!-- ===================== fine IL LOCALE ===================== -->
+
+        <!-- ===================== GALLERY STEP (dual vertical) ===================== -->
+        <section class="gallery-dual fade-up mt-24" aria-label="Galleria fotografica Grotte Beach">
+
+            <!-- Colonna sinistra — scorre verso l'alto -->
+            <div class="gallery-dual__col">
+                <div class="gallery-dual__track" id="gallery-left-track">
+                    <img src="/static/img/header2.jpg" alt="Grotte Beach storia" />
+                    <img src="/static/img/Home/Logo_Location.JPG"   alt="Grotte Beach location" />
+                    <img src="/static/img/Servizi/baldacchino.jpg"              alt="Grotte Beach spiaggia" />
+                    <img src="/static/img/Servizi/ombrellone_giardino.jpg"      alt="Grotte Beach location" />
+                    <img src="/static/img/Home/location5.JPG"       alt="Grotte Beach vista" />
+                    <img src="/static/img/header 1.jpg"       alt="Grotte Beach vista" />
+                    <img src="/static/img/Home/location3.JPG"       alt="Grotte Beach vista" />
+                    <img src="/static/img/Locale-GrotteBeach.jpg"       alt="Grotte Beach vista" />
+
+                </div>
+            </div>
+
+            <!-- Colonna destra — scorre verso il basso -->
+            <div class="gallery-dual__col">
+                <div class="gallery-dual__track" id="gallery-right-track">
+                    <img src="/static/img/food/hero_Sala.jpg"       alt="Grotte Beach storia" />
+                    <img src="/static/img/Servizi/baldacchino_2.jpeg"       alt="Grotte Beach vista" />
+                    <img src="/static/img/Home/location4.jpeg"       alt="Grotte Beach vista" />
+                    <img src="/static/img/Home/location7.JPG"  alt="Grotte Beach about" />
+                    <img src="/static/img/AboutUs-2.jpg"  alt="Grotte Beach location" />
+                    <img src="/static/img/Servizi/baldacchino_clienti.jpg"         alt="Grotte Beach panorama" />
+                    <img src="/static/img/AboutUs-Grotte.jpg" alt="Grotte Beach location" />
+                    <img src="/static/img/header3.jpg"  alt="Grotte Beach tramonto" />
+                </div>
+            </div>
+
+        </section>
+        <!-- ===================== fine GALLERY STEP ===================== -->
+
+        <!-- ===================== RISERVA NATURALE ===================== -->
+        <section class="fade-up py-xl bg-[#F2EEE9]">
+            <div class="px-gutter container-max mx-auto w-full">
+
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+
+                    <!-- Testo -->
+                    <div class="lg:w-1/2 space-y-6">
+                        <span class="font-label-sm text-primary uppercase tracking-[0.3em]">Natura &amp; Territorio</span>
+                        <h2 class="font-headline-lg text-primary leading-tight">Nel cuore della Riserva Naturale</h2>
+                        <p class="font-body-lg text-on-surface-variant leading-relaxed">
+                            Grotte Beach si trova alle porte della <strong class="text-on-surface font-semibold">Riserva Naturale Dei Laghetti di Marinello</strong>, uno degli angoli più incontaminati della costa siciliana. Lagune e fondali cristallini convivono in armonia a pochi passi da noi, regalando uno scenario unico nel Mediterraneo.
+                        </p>
+                        <p class="font-body-lg text-on-surface-variant leading-relaxed">
+                            Un contesto naturale protetto che amplifica ogni esperienza: ogni momento acquista un valore speciale immerso in questa biodiversità. Il titolare di Grotte Beach, Fausto Campana, racconta la riserva.
+                        </p>
+                    </div>
+
+                    <!-- Video YouTube (facade: preview + play → apre YouTube) -->
+                    <div class="lg:w-1/2 w-full">
+                        <a
+                            href="https://www.youtube.com/watch?v=KgLXUoXJsiM&t=9s"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="group block relative w-full overflow-hidden rounded-[2rem] shadow-xl"
+                            style="padding-top: 56.25%;"
+                            aria-label="Guarda l'intervista su YouTube"
+                        >
+                            <!-- Thumbnail -->
+                            <img
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                src="/static/img/Home/Preview_Intervista.jpg"
+                                alt="Preview intervista Grotte Beach – Riserva Naturale di Marinello"
+                            />
+                            <!-- Overlay scuro al hover -->
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors duration-300"></div>
+                            <!-- Pulsante play -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-20 h-20 rounded-full bg-white/90 group-hover:bg-white flex items-center justify-center shadow-2xl transition-all duration-300 group-hover:scale-110">
+                                    <svg class="w-8 h-8 text-[#1a4b9f] translate-x-0.5" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Label YouTube -->
+                            <span class="absolute bottom-5 right-5 flex items-center gap-1.5 bg-black/50 backdrop-blur-sm text-white text-xs font-label-sm uppercase tracking-widest px-3 py-1.5 rounded-full">
+                                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                                Guarda su YouTube
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== REVIEWS CAROUSEL ===================== -->
+        <section class="relative min-h-screen flex flex-col justify-center py-xl overflow-hidden fade-up">
+
+            <!-- Background image & overlay -->
+            <div class="absolute inset-0 z-0">
+                <img
+                    class="w-full h-full object-cover"
+                    src="/static/img/CaroselloRecensioni--Grotte.jpg"
+                    alt="Sfondo recensioni Grotte Beach"
+                />
+                <div class="absolute inset-0 bg-black/75"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="relative z-10 w-full">
+
+                <!-- Section header -->
+                <div class="text-center mb-16 px-gutter">
+                    <span class="font-label-sm text-white/60 uppercase tracking-[0.4em] mb-4 block">La nostra community</span>
+                    <h2 class="font-headline-lg text-white">Cosa dicono di noi</h2>
+                </div>
+
+                <!-- Outer wrapper: nav arrows sit here -->
+                <div class="reviews-outer container-max mx-auto px-12 md:px-20 relative">
+
+                    <!-- Prev button -->
+                    <button id="reviews-prev" aria-label="Recensione precedente"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all z-10">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+
+                    <!-- Next button -->
+                    <button id="reviews-next" aria-label="Recensione successiva"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all z-10">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+
+                    <!-- Overflow clip for the sliding track -->
+                    <div class="overflow-hidden">
+                        <div id="reviews-track" class="reviews-track">
+
+                            <!-- ═══════════════════════════════════════ -->
+                            <!-- SLIDE 1 — Google                        -->
+                            <!-- ═══════════════════════════════════════ -->
+                            <div class="review-slide">
+                                <div class="review-card">
+                                    <div class="flex gap-0.5 mb-6 justify-center text-amber-400 text-2xl leading-none">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                    <p class="font-body-lg text-white/90 leading-relaxed mb-8 text-center italic">
+                                        &ldquo;Aperitivo con un ottimo rapporto qualità prezzo. 
+                                               Apericena per una persona 4 euro e aperipesce per 2 persone, 9 euro. Prezzo giusto per la quantità e la qualità offerta. Ottimo cocktail a 5-6 euro e birre e vino assolutamente accessibili. 
+                                               La location migliora di anno in anno così come il servizio (molto accogliente).
+                                               Esperienza da provare al tramonto...
+                                               Complimenti, continuate così, torneremo sicuramente.&rdquo;
+                                    </p>
+                                    <div class="flex items-center justify-between flex-wrap gap-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm font-headline-md shrink-0">NC</div>
+                                            <div>
+                                                <p class="text-white font-semibold text-sm font-headline-md">Giuseppe Alesci</p>
+                                                <p class="text-white/50 text-xs font-label-sm tracking-widest">Agosto 2025</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full shrink-0">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                            </svg>
+                                            <span class="text-white/80 text-xs font-label-sm tracking-wide">Google</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ═══════════════════════════════════════ -->
+                            <!-- SLIDE 2 — Tripadvisor                   -->
+                            <!-- ═══════════════════════════════════════ -->
+                            <div class="review-slide">
+                                <div class="review-card">
+                                    <div class="flex gap-0.5 mb-6 justify-center text-amber-400 text-2xl leading-none">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                    <p class="font-body-lg text-white/90 leading-relaxed mb-8 text-center italic">
+                                        &ldquo;Da Fausto è sempre un piacere andare. Bellissima location su una spiaggia enorme di ghiaia finissima, 
+                                        con un mare pulito e una splendida vista sulle Eolie. La spiaggia è libera e se vuoi Grotte Beach ti fornisce di lettini e ombrelloni a dei prezzi onestissimi. 
+                                        Il cibo è molto buono con i prodotti del giorno e il rapporto qualità/prezzo è eccezionale. Infine il personale è giovane, gentile e molto accogliente. 
+                                        Abituato ai prezzi e ai disservizi della costa Ligure e Toscana mi sembra di essere in un altro mondo. Consiglio Vivamente.&rdquo;
+                                    </p>
+                                    <div class="flex items-center justify-between flex-wrap gap-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm font-headline-md shrink-0">NC</div>
+                                            <div>
+                                                <p class="text-white font-semibold text-sm font-headline-md">roberto i</p>
+                                                <p class="text-white/50 text-xs font-label-sm tracking-widest">Agosto 2025</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full shrink-0">
+                                            <svg class="w-5 h-4" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="10" r="6.5" fill="#34E0A1"/>
+                                                <circle cx="22" cy="10" r="6.5" fill="#34E0A1"/>
+                                                <circle cx="8" cy="10" r="3" fill="white"/>
+                                                <circle cx="22" cy="10" r="3" fill="white"/>
+                                                <circle cx="8" cy="10" r="1.5" fill="#1a1a1a"/>
+                                                <circle cx="22" cy="10" r="1.5" fill="#1a1a1a"/>
+                                            </svg>
+                                            <span class="text-white/80 text-xs font-label-sm tracking-wide">Tripadvisor</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ═══════════════════════════════════════ -->
+                            <!-- SLIDE 3 — Google                        -->
+                            <!-- ═══════════════════════════════════════ -->
+                            <div class="review-slide">
+                                <div class="review-card">
+                                    <div class="flex gap-0.5 mb-6 justify-center text-amber-400 text-2xl leading-none">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                    <p class="font-body-lg text-white/90 leading-relaxed mb-8 text-center italic">
+                                        &ldquo;Ottimo locale estivo sulla spiaggia con possibilità di noleggiare sdraio e ombrelloni.
+                                               Il locale prepara ottimi piatti a pranzo e bevande dissetanti . Lo consiglio a chi vuole trascorrere una giornata di relax al mare godendo di eccezionali tramonti seduti al tavolo a consumare una granita al limone !&rdquo;
+                                    </p>
+                                    <div class="flex items-center justify-between flex-wrap gap-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm font-headline-md shrink-0">NC</div>
+                                            <div>
+                                                <p class="text-white font-semibold text-sm font-headline-md">Giuseppe Moschella</p>
+                                                <p class="text-white/50 text-xs font-label-sm tracking-widest">Luglio 2025</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full shrink-0">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                            </svg>
+                                            <span class="text-white/80 text-xs font-label-sm tracking-wide">Google</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ═══════════════════════════════════════ -->
+                            <!-- SLIDE 4 — Tripadvisor                   -->
+                            <!-- ═══════════════════════════════════════ -->
+                            <div class="review-slide">
+                                <div class="review-card">
+                                    <div class="flex gap-0.5 mb-6 justify-center text-amber-400 text-2xl leading-none">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                    <p class="font-body-lg text-white/90 leading-relaxed mb-8 text-center italic">
+                                        &ldquo;Posto bellissimo, veramente incantevole il personale gentilissimo con qualità e professionalità. 
+                                        Eccellenza io lo consiglio veramente come ristoro e come balneazione di lido per la qualità e disponibilità vista isole. 
+                                        Veramente bellissimo.&rdquo;
+                                    </p>
+                                    <div class="flex items-center justify-between flex-wrap gap-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm font-headline-md shrink-0">NC</div>
+                                            <div>
+                                                <p class="text-white font-semibold text-sm font-headline-md">Gaetano F</p>
+                                                <p class="text-white/50 text-xs font-label-sm tracking-widest">Maggio 2025</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full shrink-0">
+                                            <svg class="w-5 h-4" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="10" r="6.5" fill="#34E0A1"/>
+                                                <circle cx="22" cy="10" r="6.5" fill="#34E0A1"/>
+                                                <circle cx="8" cy="10" r="3" fill="white"/>
+                                                <circle cx="22" cy="10" r="3" fill="white"/>
+                                                <circle cx="8" cy="10" r="1.5" fill="#1a1a1a"/>
+                                                <circle cx="22" cy="10" r="1.5" fill="#1a1a1a"/>
+                                            </svg>
+                                            <span class="text-white/80 text-xs font-label-sm tracking-wide">Tripadvisor</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ═══════════════════════════════════════ -->
+                            <!-- SLIDE 5 — Google                        -->
+                            <!-- ═══════════════════════════════════════ -->
+                            <div class="review-slide">
+                                <div class="review-card">
+                                    <div class="flex gap-0.5 mb-6 justify-center text-amber-400 text-2xl leading-none">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                    <p class="font-body-lg text-white/90 leading-relaxed mb-8 text-center italic">
+                                        &ldquo;Posto meraviglioso sul mare, arredamento da favola: il luogo perfetto per consumare un aperitivo in compagnia nella calma paradisiaca. Consigliato anche per una pausa pranzo dal mare veloce. 
+                                               Cucina senza pretese, personale molto cortese e ben disposto, fa sì che si confermi un posto molto accogliente. 
+                                               Consigliati panini e granite. Chiosco economico con prezzi accessibili.&rdquo;
+                                    </p>
+                                    <div class="flex items-center justify-between flex-wrap gap-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm font-headline-md shrink-0">NC</div>
+                                            <div>
+                                                <p class="text-white font-semibold text-sm font-headline-md">Laura Addamo</p>
+                                                <p class="text-white/50 text-xs font-label-sm tracking-widest">Aprile 2025</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full shrink-0">
+                                            <svg class="w-4 h-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                            </svg>
+                                            <span class="text-white/80 text-xs font-label-sm tracking-wide">Google</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ═══════════════════════════════════════ -->
+                            <!-- SLIDE 6 — Tripadvisor                   -->
+                            <!-- ═══════════════════════════════════════ -->
+                            <div class="review-slide">
+                                <div class="review-card">
+                                    <div class="flex gap-0.5 mb-6 justify-center text-amber-400 text-2xl leading-none">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                    <p class="font-body-lg text-white/90 leading-relaxed mb-8 text-center italic">
+                                        &ldquo;Bella piccola scoperta la nostra prima sera
+                                               Cibo e bevande incredibili, ottimo rapporto qualità-prezzo.
+                                               Atmosfera incantevole ❤️
+                                               Personale molto accomodante soprattutto Elena
+                                               Torneremo sicuramente prima della fine del nostro soggiorno..&rdquo;
+                                    </p>
+                                    <div class="flex items-center justify-between flex-wrap gap-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm font-headline-md shrink-0">NC</div>
+                                            <div>
+                                                <p class="text-white font-semibold text-sm font-headline-md">Lou G</p>
+                                                <p class="text-white/50 text-xs font-label-sm tracking-widest">Settembre 2025</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full shrink-0">
+                                            <svg class="w-5 h-4" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="10" r="6.5" fill="#34E0A1"/>
+                                                <circle cx="22" cy="10" r="6.5" fill="#34E0A1"/>
+                                                <circle cx="8" cy="10" r="3" fill="white"/>
+                                                <circle cx="22" cy="10" r="3" fill="white"/>
+                                                <circle cx="8" cy="10" r="1.5" fill="#1a1a1a"/>
+                                                <circle cx="22" cy="10" r="1.5" fill="#1a1a1a"/>
+                                            </svg>
+                                            <span class="text-white/80 text-xs font-label-sm tracking-wide">Tripadvisor</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><!-- /reviews-track -->
+                    </div><!-- /overflow-hidden -->
+                </div><!-- /reviews-outer -->
+
+                <!-- Dots -->
+                <div id="reviews-dots" class="flex justify-center gap-2 mt-10"></div>
+
+            </div><!-- /content -->
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-white dark:bg-slate-950 border-t border-amber-900/10 w-full">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-10 py-20 max-w-7xl mx-auto">
+
+            <!-- Brand -->
+            <div class="space-y-8">
+                <img src="/static/img/Home/logo.svg" alt="Grotte Beach" class="h-20 w-auto object-contain" />
+                <p class="font-['Epilogue'] text-sm font-light leading-relaxed text-slate-800 dark:text-slate-200">
+                    Un locale nel cuore della costa siciliana di Mongiove. Vivi il ritmo della marea e il lusso della natura.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-sm">public</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-sm">photo_camera</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-sm">mail</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="grid grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h5 class="font-label-sm uppercase tracking-widest text-primary">Scopri</h5>
+                    <ul class="space-y-2">
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="#">Location</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="esperienze_copia.html">Esperienze</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="food_V1.html">Food</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="servizi.html">Servizi</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="https://www.iubenda.com/privacy-policy/32950980" target="_blank" rel="noopener">Privacy Policy</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="https://www.iubenda.com/privacy-policy/32950980/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="font-label-sm uppercase tracking-widest text-primary">Contatti</h5>
+                    <ul class="space-y-2">
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="https://www.instagram.com/grotte_beach/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="https://www.facebook.com/grottebeachmongiove" target="_blank" rel="noopener">Facebook</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="mailto:grottebeach@yahoo.com">Email</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="tel:+393891013881">Telefono</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="space-y-6">
+                <h5 class="font-label-sm uppercase tracking-widest text-primary">Resta in contatto</h5>
+                <p class="font-['Epilogue'] text-sm font-light text-slate-800">Aggiornamenti stagionali e accesso esclusivo agli eventi.</p>
+                <form class="flex border-b border-primary/20 focus-within:border-primary transition-all">
+                    <input
+                        class="bg-transparent border-none focus:ring-0 w-full font-label-sm uppercase tracking-wider text-xs py-3 px-0 placeholder:text-slate-400"
+                        placeholder="Indirizzo Email"
+                        type="email"
+                    />
+                    <button class="material-symbols-outlined text-primary" type="submit">trending_flat</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Footer bottom bar -->
+        <div class="max-w-7xl mx-auto px-10 py-10 border-t border-amber-900/5 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-['Epilogue'] text-sm font-light text-slate-500">&copy; 2026 Grotte Beach.</p>
+            <div class="flex gap-6 items-center">
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Sicilia, Italia</span>
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Mongiove - Patti (ME)</span>
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Sviluppato da <strong class="tracking-widest">TEKWORN</strong></span>
+            </div>
+        </div>
+
+    </footer>
+
+    
+
+    <script src="static/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+/* =====================================================
+   Esperienze — Custom Styles
+   ===================================================== */
+
+@font-face {
+    font-family: 'Pristina';
+    src: url('../font/PRISTINA.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+    overscroll-behavior-x: none;
+    overflow-x: clip;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    header .nav-logo {
+        font-size: 2.1rem !important;
+    }
+}
+
+/* ── Fade-up animation (same as index) ── */
+.fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Organic blob mask for decorative images */
+.pebble-mask {
+    border-radius: 60% 40% 70% 30% / 40% 50% 60% 40%;
+}
+
+/* Animated underline on hover */
+.wave-underline {
+    position: relative;
+}
+.wave-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background: #1a4b9f;
+    transition: width 0.5s ease;
+}
+.wave-underline:hover::after {
+    width: 100%;
+}
+
+/* Warm card shadow */
+.sand-shadow {
+    box-shadow: 0 10px 30px -10px rgba(122, 101, 78, 0.15);
+}
+
+/* ── Navbar scroll behaviour ── */
+header {
+    transition: background 0.45s ease, backdrop-filter 0.45s ease,
+                box-shadow 0.45s ease, border-color 0.45s ease;
+}
+header .nav-logo {
+    font-family: 'Pristina', cursive;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 1.75rem;
+    transition: color 0.45s ease;
+}
+header .nav-links a {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    line-height: 1;
+    padding-bottom: 4px;
+    color: #64748b;
+    position: relative;
+    transition: color 0.45s ease;
+}
+header .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: transparent;
+    transition: background 0.45s ease;
+}
+header .nav-links a:hover {
+    color: #1a4b9f;
+}
+header .nav-links a.nav-active {
+    color: #1a4b9f;
+}
+header .nav-links a.nav-active::after {
+    background: rgba(26, 75, 159, 0.5);
+}
+header .nav-btn {
+    transition: color 0.45s ease, background 0.45s ease, border-color 0.45s ease;
+}
+
+/* ── Hamburger icon ── */
+.nav-hamburger .material-symbols-outlined {
+    color: #1a4b9f;
+    font-size: 26px;
+    transition: color 0.45s ease;
+}
+
+/* ── Mobile full-screen menu overlay ── */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 49;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(250, 249, 252, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.mobile-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+/* Tema scuro quando sull'hero */
+.mobile-menu-link {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1a4b9f;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+.mobile-menu-link:hover {
+    border-bottom-color: rgba(26, 75, 159, 0.4);
+}
+.mobile-menu-link.nav-active {
+    border-bottom-color: rgba(26, 75, 159, 0.6);
+}
+.mobile-prenota-btn {
+    transition: background 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+}
+
+/* Gallery carousel */
+.gallery-wrapper {
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+}
+.gallery-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome / Safari */
+}

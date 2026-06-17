@@ -1,0 +1,198 @@
+/* =====================================================
+   Servizi — Custom Styles
+   ===================================================== */
+
+@font-face {
+    font-family: 'Pristina';
+    src: url('../font/PRISTINA.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+    overscroll-behavior-x: none;
+    overflow-x: clip;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    header .nav-logo {
+        font-size: 2.1rem !important;
+    }
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ── Navbar scroll behaviour ── */
+header {
+    transition: background 0.45s ease, backdrop-filter 0.45s ease,
+                box-shadow 0.45s ease, border-color 0.45s ease;
+}
+header .nav-logo {
+    font-family: 'Pristina', cursive;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 1.75rem;
+    transition: color 0.45s ease;
+}
+header .nav-links a {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    line-height: 1;
+    padding-bottom: 4px;
+    color: #64748b;
+    position: relative;
+    transition: color 0.45s ease;
+}
+header .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: transparent;
+    transition: background 0.45s ease;
+}
+header .nav-links a:hover {
+    color: #1a4b9f;
+}
+header .nav-links a.nav-active {
+    color: #1a4b9f;
+}
+header .nav-links a.nav-active::after {
+    background: rgba(26, 75, 159, 0.5);
+}
+header .nav-btn {
+    transition: color 0.45s ease, background 0.45s ease, border-color 0.45s ease;
+}
+
+/* ── Hamburger icon ── */
+.nav-hamburger .material-symbols-outlined {
+    color: #1a4b9f;
+    font-size: 26px;
+    transition: color 0.45s ease;
+}
+
+/* ── Mobile full-screen menu overlay ── */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 49;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(250, 249, 252, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.mobile-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.mobile-menu-link {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1a4b9f;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+.mobile-menu-link:hover {
+    border-bottom-color: rgba(26, 75, 159, 0.4);
+}
+.mobile-menu-link.nav-active {
+    border-bottom-color: rgba(26, 75, 159, 0.6);
+}
+.mobile-prenota-btn {
+    transition: background 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+}
+
+.bg-mesh {
+    background-color: #faf9fc;
+    background-image:
+        radial-gradient(at 0% 0%, rgba(242, 238, 233, 0.5) 0, transparent 50%),
+        radial-gradient(at 50% 0%, rgba(164, 211, 147, 0.1) 0, transparent 50%);
+}
+
+.text-shadow-sm {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sand-shadow {
+    box-shadow: 0 2px 16px 0 rgba(180, 150, 100, 0.10);
+}
+
+.pebble-mask {
+    border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+}
+
+/* ── Scroll animations ── */
+.fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── CTA split diagonale ── */
+/* Su desktop: entrambi i pannelli coprono l'intera sezione
+   e sono ritagliati a clip-path per creare la diagonale al centro.
+   La linea di taglio parte dal 58% in alto e arriva al 42% in basso,
+   producendo una diagonale \ che divide lo schermo da sinistra a destra
+   senza toccare gli angoli (stessa tecnica del locale-split in index.html). */
+.cta-split__left {
+    clip-path: polygon(0 0, 58% 0, 42% 100%, 0 100%);
+}
+.cta-split__right {
+    clip-path: polygon(58% 0, 100% 0, 100% 100%, 42% 100%);
+}
+
+/* Mobile: stack verticale con taglio diagonale orizzontale tra i due pannelli */
+@media (max-width: 767px) {
+    .cta-split {
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+    }
+    .cta-split__half {
+        position: relative !important;
+        height: 56vw;
+        min-height: 240px;
+        max-height: 320px;
+    }
+    /* Pannello superiore: bordo inferiore inclinato — destra più alta (\ ) */
+    .cta-split__left {
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), 0 100%);
+        z-index: 1;
+    }
+    /* Pannello inferiore: bordo superiore inclinato a specchio, sovrapposto di 28px */
+    .cta-split__right {
+        clip-path: polygon(0 28px, 100% 0, 100% 100%, 0 100%);
+        margin-top: -28px;
+        z-index: 2;
+    }
+    /* Nasconde il testo descrittivo su mobile per non sforare */
+    .cta-split__half p {
+        display: none;
+    }
+}

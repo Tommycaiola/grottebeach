@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error":                    "#ffffff",
+                        "inverse-primary":             "#a8caef",
+                        "primary-container":           "#1a4b9f",
+                        "outline":                     "#73777e",
+                        "on-primary-fixed-variant":    "#274969",
+                        "tertiary-container":          "#073002",
+                        "secondary-fixed-dim":         "#c5c7c8",
+                        "surface-container-highest":   "#e3e2e5",
+                        "surface-dim":                 "#dadadd",
+                        "on-tertiary":                 "#ffffff",
+                        "background":                  "#faf9fc",
+                        "inverse-surface":             "#2f3033",
+                        "on-surface-variant":          "#42474d",
+                        "outline-variant":             "#c3c7ce",
+                        "primary":                     "#1a4b9f",
+                        "on-primary-container":        "#7293b6",
+                        "secondary-container":         "#e1e3e4",
+                        "secondary-fixed":             "#e1e3e4",
+                        "secondary":                   "#5c5f60",
+                        "surface-container":           "#eeedf0",
+                        "on-secondary":                "#ffffff",
+                        "surface":                     "#faf9fc",
+                        "on-background":               "#1a1c1e",
+                        "on-secondary-fixed":          "#191c1d",
+                        "on-primary":                  "#ffffff",
+                        "tertiary-fixed-dim":          "#a4d393",
+                        "surface-bright":              "#faf9fc",
+                        "tertiary":                    "#011900",
+                        "on-secondary-container":      "#626566",
+                        "on-error-container":          "#93000a",
+                        "on-tertiary-fixed-variant":   "#28501e",
+                        "surface-container-lowest":    "#ffffff",
+                        "inverse-on-surface":          "#f1f0f3",
+                        "primary-fixed":               "#cfe5ff",
+                        "surface-variant":             "#e3e2e5",
+                        "on-tertiary-container":       "#6f9b60",
+                        "on-secondary-fixed-variant":  "#454748",
+                        "surface-tint":                "#406182",
+                        "on-surface":                  "#1a1c1e",
+                        "error":                       "#ba1a1a",
+                        "surface-container-low":       "#f4f3f6",
+                        "on-primary-fixed":            "#001d34",
+                        "on-tertiary-fixed":           "#022100",
+                        "error-container":             "#ffdad6",
+                        "surface-container-high":      "#e8e8eb",
+                        "primary-fixed-dim":           "#a8caef",
+                        "tertiary-fixed":              "#c0f0ad"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg:      "0.5rem",
+                        xl:      "0.75rem",
+                        full:    "9999px"
+                    },
+                    spacing: {
+                        lg:              "48px",
+                        xl:              "80px",
+                        xs:              "4px",
+                        gutter:          "24px",
+                        md:              "24px",
+                        sm:              "12px",
+                        base:            "8px",
+                        "container-max": "1280px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Epilogue"],
+                        "body-md":     ["Plus Jakarta Sans"],
+                        "headline-md": ["Epilogue"],
+                        "body-lg":     ["Plus Jakarta Sans"],
+                        "display-xl":  ["Epilogue"],
+                        "label-sm":    ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["48px", { lineHeight: "1.2",  fontWeight: "500" }],
+                        "body-md":     ["16px", { lineHeight: "1.6",  fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "1.3",  fontWeight: "500" }],
+                        "body-lg":     ["18px", { lineHeight: "1.6",  fontWeight: "400" }],
+                        "display-xl":  ["72px", { lineHeight: "1.1",  letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "label-sm":    ["13px", { lineHeight: "1",    letterSpacing: "0.05em",  fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link href="static/css/eventi.css" rel="stylesheet" />
+
+    <title>Grotte Beach — Eventi</title>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-white">
+
+    <!-- ===================== TOP NAVIGATION ===================== -->
+    <header class="fade-in fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-white/10 shadow-sm">
+        <nav class="flex justify-between items-center px-8 py-1 w-full">
+
+            <div class="nav-logo tracking-[0.1em] text-[#1a4b9f] dark:text-white">
+                <img src="/static/img/Home/logo.svg" alt="Grotte Beach" class="h-20 w-auto object-contain" />
+            </div>
+
+            <div class="flex items-center gap-6">
+                <div class="nav-links hidden md:flex items-center gap-8">
+                    <a href="index.html">Home</a>
+                    <a href="servizi.html">Servizi</a>
+                    <a href="esperienze_copia.html">Esperienze</a>
+                    <a href="food_V1.html">Food</a>
+                    <a class="nav-active" href="eventi.html">Eventi</a>
+                    <a href="#">Merch</a>
+                    <a href="contact.html">Contatti</a>
+                </div>
+
+                <a href="tel:+393891013881" class="nav-btn hidden md:block bg-[#1a4b9f] text-white px-6 py-2.5 rounded-full font-label-sm uppercase tracking-wider scale-95 active:scale-90 transition-transform">
+                    Prenota Ora
+                </a>
+            </div>
+
+            <!-- Hamburger (mobile only) -->
+            <button id="menu-toggle" class="nav-hamburger md:hidden p-1" aria-label="Apri menu">
+                <span class="material-symbols-outlined" id="menu-icon">menu</span>
+            </button>
+
+        </nav>
+    </header>
+
+    <!-- Mobile full-screen menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+        <nav class="flex flex-col items-center gap-10">
+            <a class="mobile-menu-link" href="index.html">Home</a>
+            <a class="mobile-menu-link" href="servizi.html">Servizi</a>
+            <a class="mobile-menu-link" href="esperienze_copia.html">Esperienze</a>
+            <a class="mobile-menu-link" href="food_V1.html">Food</a>
+            <a class="mobile-menu-link nav-active" href="eventi.html">Eventi</a>
+            <a class="mobile-menu-link" href="#">Merch</a>
+            <a class="mobile-menu-link" href="contact.html">Contatti</a>
+        </nav>
+        <a href="tel:+393891013881" class="mobile-prenota-btn mt-10 bg-[#1a4b9f] text-white px-10 py-4 rounded-full font-label-sm uppercase tracking-widest">
+            Prenota Ora
+        </a>
+    </div>
+
+    <main>
+
+        <!-- ===================== HERO ===================== -->
+        <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+
+            <div class="absolute inset-0 z-0">
+                <img
+                    class="w-full h-full object-cover"
+                    src="/static/img/eventi/matrimonio.JPG"
+                    alt="Grotte Beach — il tuo evento"
+                />
+                <div class="absolute inset-0 bg-black/40"></div>
+            </div>
+
+            <div class="relative z-10 text-center px-gutter container-max mx-auto">
+                <!-- <span class="fade-up font-label-sm text-white/80 uppercase tracking-[0.45em] mb-3 block drop-shadow-md" data-delay="200">
+                    Compleanni &middot; Matrimoni &middot; Lauree
+                </span> -->
+                <h1 class="fade-up font-display-xl text-white text-5xl md:text-7xl mb-2" data-delay="100">
+                    Eventi &amp; Cerimonie
+                </h1>
+                <span class="fade-up font-label-sm text-white/80 uppercase tracking-[0.45em] mb-2 block drop-shadow-md" data-delay="200">
+                    Compleanni &middot; Matrimoni &middot; Lauree
+                </span>
+                <p class="fade-up font-body-lg text-white/60 max-w-xl mx-auto" data-delay="300">
+                    Il giardino di Grotte Beach &egrave; a tua completa disposizione.
+                </p>
+            </div>
+
+            
+
+        </section>
+
+        <!-- ===================== INTRO ===================== -->
+        <section class="fade-up py-xl bg-mesh">
+            <div class="px-gutter container-max mx-auto text-center max-w-3xl">
+                <span class="font-label-sm text-on-tertiary-container uppercase tracking-widest flex items-center justify-center gap-3 mb-6">
+                    <span class="w-8 h-px bg-on-tertiary-container inline-block"></span>
+                    Grotte Beach Eventi
+                    <span class="w-8 h-px bg-on-tertiary-container inline-block"></span>
+                </span>
+                <h2 class="font-headline-lg text-primary mb-6">Ogni momento merita una cornice indimenticabile</h2>
+                <p class="font-body-lg text-on-surface-variant leading-relaxed">
+                    Immerso nella riserva naturale di Marinello, il nostro giardino privato si trasforma in uno spazio esclusivo per celebrare i tuoi traguardi pi&ugrave; importanti. Catering personalizzato, atmosfera unica, vista sul mare.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===================== COMPLEANNI ===================== -->
+        <section id="compleanni" class="fade-up relative overflow-hidden bg-[#F2EEE9]">
+
+            <!-- Immagine mobile -->
+            <div class="lg:hidden w-full" style="height:52vw;min-height:240px;max-height:420px;">
+                <img class="w-full h-full object-cover" src="/static/img/eventi/compleanni.JPG" alt="Grotte Beach festa di compleanno" />
+            </div>
+
+            <!-- Immagine desktop (metà destra) -->
+            <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2 z-0">
+                <img class="w-full h-full object-cover" src="/static/img/eventi/compleanni.JPG" alt="Grotte Beach festa di compleanno" />
+            </div>
+
+            <!-- Contenuto -->
+            <div class="relative z-10 flex lg:min-h-[700px]">
+                <!-- Pannello testo (metà sinistra) -->
+                <div class="w-full lg:w-1/2 flex items-center py-16 lg:py-24 px-8 lg:px-16 xl:px-20">
+                    <div class="max-w-lg w-full space-y-6">
+                        <span class="font-label-sm text-on-tertiary-container uppercase tracking-widest flex items-center gap-3">
+                            <span class="w-8 h-px bg-on-tertiary-container inline-block"></span>
+                            Compleanni
+                        </span>
+                        <h2 class="font-headline-lg text-primary leading-tight">Festeggia<br>come meriti</h2>
+                        <p class="font-body-lg text-on-surface-variant leading-relaxed">
+                            Dal picnic in riva al mare alla cena sotto le stelle, organizziamo ogni dettaglio del tuo compleanno. Il giardino di Grotte Beach &egrave; il palcoscenico perfetto per una festa che resti nel cuore.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-on-tertiary-container text-base">check_circle</span>
+                                Allestimento personalizzato
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-on-tertiary-container text-base">check_circle</span>
+                                Catering &amp; cocktail bar
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-on-tertiary-container text-base">check_circle</span>
+                                Area giardino e spiaggia privata
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-on-tertiary-container text-base">check_circle</span>
+                                Musica e intrattenimento
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Spacer destro (occupa la metà immagine) -->
+                <div class="hidden lg:block lg:w-1/2 flex-shrink-0"></div>
+            </div>
+
+        </section>
+
+        <!-- ===================== MATRIMONI ===================== -->
+        <section id="matrimoni" class="fade-up relative overflow-hidden bg-white">
+
+            <!-- Immagine mobile -->
+            <div class="lg:hidden w-full" style="height:52vw;min-height:240px;max-height:420px;">
+                <img class="w-full h-full object-cover" src="/static/img/eventi/matrimonio3.JPG" alt="Tramonto a Grotte Beach per un matrimonio" />
+            </div>
+
+            <!-- Immagine desktop (metà sinistra) -->
+            <div class="hidden lg:block absolute inset-y-0 left-0 w-1/2 z-0">
+                <img class="w-full h-full object-cover" src="/static/img/eventi/matrimonio3.JPG" alt="Tramonto a Grotte Beach per un matrimonio" />
+            </div>
+
+            <!-- Contenuto -->
+            <div class="relative z-10 flex justify-end lg:min-h-[700px]">
+                <!-- Spacer sinistro (occupa la metà immagine) -->
+                <div class="hidden lg:block lg:w-1/2 flex-shrink-0"></div>
+                <!-- Pannello testo (metà destra) -->
+                <div class="w-full lg:w-1/2 flex items-center py-16 lg:py-24 px-8 lg:px-16 xl:px-20">
+                    <div class="max-w-lg w-full space-y-6">
+                        <span class="font-label-sm text-on-tertiary-container uppercase tracking-widest flex items-center gap-3">
+                            <span class="w-8 h-px bg-on-tertiary-container inline-block"></span>
+                            Matrimoni
+                        </span>
+                        <h2 class="font-headline-lg text-primary leading-tight">Il giorno pi&ugrave; bello<br>della tua vita</h2>
+                        <p class="font-body-lg text-on-surface-variant leading-relaxed">
+                            Dì s&igrave; con il Tirreno sullo sfondo e la natura incontaminata della riserva intorno a voi. Grotte Beach offre uno scenario da sogno per un matrimonio intimo e autentico, lontano dalla routine.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-on-tertiary-container text-base">check_circle</span>
+                                Cerimonia in giardino o sulla spiaggia
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-on-tertiary-container text-base">check_circle</span>
+                                Ricevimento con vista mare
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-on-tertiary-container text-base">check_circle</span>
+                                Coordinamento eventi dedicato
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-on-tertiary-container text-base">check_circle</span>
+                                Pacchetti su misura
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ===================== LAUREE ===================== -->
+        <section id="lauree" class="fade-up relative overflow-hidden bg-[#F2EEE9]">
+
+            <!-- Immagine mobile -->
+            <div class="lg:hidden w-full" style="height:52vw;min-height:240px;max-height:420px;">
+                <img class="w-full h-full object-cover" src="/static/img/eventi/laurea.jpg" alt="Mare di Grotte Beach per festeggiare la laurea" />
+            </div>
+
+            <!-- Immagine desktop (metà destra) -->
+            <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2 z-0">
+                <img class="w-full h-full object-cover" src="/static/img/eventi/laurea.jpg" alt="Mare di Grotte Beach per festeggiare la laurea" />
+            </div>
+
+            <!-- Contenuto -->
+            <div class="relative z-10 flex lg:min-h-[700px]">
+                <!-- Pannello testo (metà sinistra) -->
+                <div class="w-full lg:w-1/2 flex items-center py-16 lg:py-24 px-8 lg:px-16 xl:px-20">
+                    <div class="max-w-lg w-full space-y-6">
+                        <span class="font-label-sm text-on-tertiary-container uppercase tracking-widest flex items-center gap-3">
+                            <span class="w-8 h-px bg-on-tertiary-container inline-block"></span>
+                            Lauree
+                        </span>
+                        <h2 class="font-headline-lg text-primary leading-tight">Brinda<br>al tuo futuro</h2>
+                        <p class="font-body-lg text-on-surface-variant leading-relaxed">
+                            Anni di studio e sacrifici meritano una celebrazione all'altezza. Festeggia la tua laurea con amici e famiglia in un ambiente unico, tra mare cristallino e natura siciliana.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-on-tertiary-container text-base">check_circle</span>
+                                Aperitivo e cena in spiaggia
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-on-tertiary-container text-base">check_circle</span>
+                                DJ set &amp; live music
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-on-tertiary-container text-base">check_circle</span>
+                                Decorazioni a tema
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-on-tertiary-container text-base">check_circle</span>
+                                Servizio fotografico incluso su richiesta
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Spacer destro (occupa la metà immagine) -->
+                <div class="hidden lg:block lg:w-1/2 flex-shrink-0"></div>
+            </div>
+
+        </section>
+
+        <!-- ===================== IL GIARDINO ===================== -->
+        <section class="giardino-section fade-up relative overflow-hidden">
+
+            <!-- Immagine mobile -->
+            <div class="lg:hidden w-full" style="height:52vw;min-height:240px;max-height:420px;">
+                <img class="w-full h-full object-cover" src="/static/img/eventi/18esimo.JPG" alt="Il giardino di Grotte Beach" />
+            </div>
+
+            <!-- BG desktop -->
+            <div class="hidden lg:block absolute inset-0 z-0">
+                <img class="w-full h-full object-cover" src="/static/img/eventi/18esimo copia 2.JPG" alt="Il giardino di Grotte Beach" />
+                <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+
+            <!-- Maschera diagonale -->
+            <div class="giardino-split__mask hidden lg:block absolute inset-0 z-10 bg-surface pointer-events-none"></div>
+
+            <!-- Contenuto -->
+            <div class="relative z-20 flex flex-col lg:flex-row lg:min-h-[88vh]">
+
+                <!-- Spacer sinistro -->
+                <div class="hidden lg:block lg:w-[58%] flex-shrink-0"></div>
+
+                <!-- Pannello testo -->
+                <div class="flex-1 bg-surface flex items-center py-16 px-8 lg:px-14 xl:px-20">
+                    <div class="max-w-lg w-full space-y-8">
+
+                        <div class="space-y-4">
+                            <span class="font-label-sm text-on-tertiary-container uppercase tracking-widest flex items-center gap-3">
+                                <span class="w-10 h-px bg-current opacity-50 inline-block"></span>
+                                Il Giardino
+                            </span>
+                            <h2 class="font-headline-lg text-primary leading-tight">Uno spazio tutto<br>per te</h2>
+                            <p class="font-body-lg text-on-surface-variant">
+                                Il giardino di Grotte Beach &egrave; ceduto a uso esclusivo per il tuo evento. Ampio, curato e affacciato sul Tirreno, offre l'ambientazione naturale che nessuna sala conferenze potr&agrave; mai replicare.
+                            </p>
+                        </div>
+
+                        <div class="space-y-5">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="material-symbols-outlined text-on-tertiary-container text-base">yard</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-sm uppercase tracking-widest text-primary mb-1">Area verde privata</p>
+                                    <p class="font-body-md text-on-surface-variant">Ombrelloni, tavoli e luci soffuse tra gli ulivi siciliani.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="material-symbols-outlined text-on-tertiary-container text-base">waves</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-sm uppercase tracking-widest text-primary mb-1">Accesso diretto al mare</p>
+                                    <p class="font-body-md text-on-surface-variant">La spiaggia privata &egrave; inclusa nel pacchetto evento.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="material-symbols-outlined text-on-tertiary-container text-base">local_bar</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-sm uppercase tracking-widest text-primary mb-1">Bar &amp; cucina</p>
+                                    <p class="font-body-md text-on-surface-variant">Servizio Bar e cucina a tua completa disposizione.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== CTA ===================== -->
+        <section class="fade-up relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover" src="/static/img/eventi/cta.JPG" alt="Tramonto a Grotte Beach" />
+                <div class="absolute inset-0 bg-black/35"></div>
+            </div>
+            <div class="relative z-10 py-xl px-gutter container-max mx-auto text-center">
+                <span class="font-label-sm text-white/60 uppercase tracking-[0.4em] mb-6 block">
+                    Organizza il tuo evento
+                </span>
+                <h2 class="font-headline-lg text-white mb-6 max-w-2xl mx-auto">Rendi indimenticabile ogni celebrazione</h2>
+                <p class="font-body-lg text-white/70 max-w-xl mx-auto mb-10">
+                    Contattaci per un preventivo personalizzato. Il nostro team &egrave; a tua disposizione per costruire together l'evento dei tuoi sogni.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="mailto:grottebeach@yahoo.com" class="inline-flex items-center gap-2 px-10 py-4 border-2 border-white text-white rounded-full font-label-sm uppercase tracking-widest hover:bg-white/10 transition-all">
+                        <span class="material-symbols-outlined text-base">mail</span>
+                        Scrivici
+                    </a>
+                    <a href="tel:+393891013881" class="inline-flex items-center gap-2 px-10 py-4 bg-white text-primary rounded-full font-label-sm uppercase tracking-widest hover:bg-white/90 transition-all">
+                        <span class="material-symbols-outlined text-base">phone</span>
+                        Chiamaci
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-white dark:bg-slate-950 border-t border-amber-900/10 w-full">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-10 py-20 max-w-7xl mx-auto">
+
+            <!-- Brand -->
+            <div class="space-y-8">
+                <img src="/static/img/Home/logo.svg" alt="Grotte Beach" class="h-20 w-auto object-contain" />
+                <p class="font-['Epilogue'] text-sm font-light leading-relaxed text-slate-800 dark:text-slate-200">
+                    Un locale nel cuore della costa siciliana di Mongiove. Vivi il ritmo della marea e il lusso della natura.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-sm">public</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-sm">photo_camera</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                        <span class="material-symbols-outlined text-sm">mail</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="grid grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h5 class="font-label-sm uppercase tracking-widest text-primary">Scopri</h5>
+                    <ul class="space-y-2">
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="index.html">Home</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="esperienze_copia.html">Esperienze</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="food_V1.html">Food</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="servizi.html">Servizi</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="eventi.html">Eventi</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="font-label-sm uppercase tracking-widest text-primary">Contatti</h5>
+                    <ul class="space-y-2">
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="https://www.instagram.com/grotte_beach/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="https://www.facebook.com/grottebeachmongiove" target="_blank" rel="noopener">Facebook</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="mailto:grottebeach@yahoo.com">Email</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="tel:+393891013881">Telefono</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="space-y-6">
+                <h5 class="font-label-sm uppercase tracking-widest text-primary">Resta in contatto</h5>
+                <p class="font-['Epilogue'] text-sm font-light text-slate-800">Aggiornamenti stagionali e accesso esclusivo agli eventi.</p>
+                <form class="flex border-b border-primary/20 focus-within:border-primary transition-all">
+                    <input
+                        class="bg-transparent border-none focus:ring-0 w-full font-label-sm uppercase tracking-wider text-xs py-3 px-0 placeholder:text-slate-400"
+                        placeholder="Indirizzo Email"
+                        type="email"
+                    />
+                    <button class="material-symbols-outlined text-primary" type="submit">trending_flat</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Footer bottom bar -->
+        <div class="max-w-7xl mx-auto px-10 py-10 border-t border-amber-900/5 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-['Epilogue'] text-sm font-light text-slate-500">&copy; 2026 Grotte Beach.</p>
+            <div class="flex gap-6 items-center">
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Sicilia, Italia</span>
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Mongiove - Patti (ME)</span>
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Sviluppato da <strong class="tracking-widest">TEKWORN</strong></span>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="static/js/eventi.js"></script>
+</body>
+</html>

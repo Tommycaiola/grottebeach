@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contatti | Grotte Beach</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error":                    "#ffffff",
+                        "inverse-primary":             "#a8caef",
+                        "primary-container":           "#1a4b9f",
+                        "outline":                     "#73777e",
+                        "on-primary-fixed-variant":    "#274969",
+                        "tertiary-container":          "#073002",
+                        "secondary-fixed-dim":         "#c5c7c8",
+                        "surface-container-highest":   "#e3e2e5",
+                        "surface-dim":                 "#dadadd",
+                        "on-tertiary":                 "#ffffff",
+                        "background":                  "#faf9fc",
+                        "inverse-surface":             "#2f3033",
+                        "on-surface-variant":          "#42474d",
+                        "outline-variant":             "#c3c7ce",
+                        "primary":                     "#1a4b9f",
+                        "on-primary-container":        "#7293b6",
+                        "secondary-container":         "#e1e3e4",
+                        "secondary-fixed":             "#e1e3e4",
+                        "secondary":                   "#5c5f60",
+                        "surface-container":           "#eeedf0",
+                        "on-secondary":                "#ffffff",
+                        "surface":                     "#faf9fc",
+                        "on-background":               "#1a1c1e",
+                        "on-secondary-fixed":          "#191c1d",
+                        "on-primary":                  "#ffffff",
+                        "tertiary-fixed-dim":          "#a4d393",
+                        "surface-bright":              "#faf9fc",
+                        "tertiary":                    "#011900",
+                        "on-secondary-container":      "#626566",
+                        "on-error-container":          "#93000a",
+                        "on-tertiary-fixed-variant":   "#28501e",
+                        "surface-container-lowest":    "#ffffff",
+                        "inverse-on-surface":          "#f1f0f3",
+                        "primary-fixed":               "#cfe5ff",
+                        "surface-variant":             "#e3e2e5",
+                        "on-tertiary-container":       "#6f9b60",
+                        "on-secondary-fixed-variant":  "#454748",
+                        "surface-tint":                "#406182",
+                        "on-surface":                  "#1a1c1e",
+                        "error":                       "#ba1a1a",
+                        "surface-container-low":       "#f4f3f6",
+                        "on-primary-fixed":            "#001d34",
+                        "on-tertiary-fixed":           "#022100",
+                        "error-container":             "#ffdad6",
+                        "surface-container-high":      "#e8e8eb",
+                        "primary-fixed-dim":           "#a8caef",
+                        "tertiary-fixed":              "#c0f0ad"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg:      "0.5rem",
+                        xl:      "0.75rem",
+                        full:    "9999px"
+                    },
+                    spacing: {
+                        lg:              "48px",
+                        xl:              "80px",
+                        xs:              "4px",
+                        gutter:          "24px",
+                        md:              "24px",
+                        sm:              "12px",
+                        base:            "8px",
+                        "container-max": "1280px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Epilogue"],
+                        "body-md":     ["Plus Jakarta Sans"],
+                        "headline-md": ["Epilogue"],
+                        "body-lg":     ["Plus Jakarta Sans"],
+                        "display-xl":  ["Epilogue"],
+                        "label-sm":    ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["48px", { lineHeight: "1.2",  fontWeight: "500" }],
+                        "body-md":     ["16px", { lineHeight: "1.6",  fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "1.3",  fontWeight: "500" }],
+                        "body-lg":     ["18px", { lineHeight: "1.6",  fontWeight: "400" }],
+                        "display-xl":  ["72px", { lineHeight: "1.1",  letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "label-sm":    ["13px", { lineHeight: "1",    letterSpacing: "0.05em",  fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link href="static/css/contact.css" rel="stylesheet" />
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-white">
+
+    <!-- ===================== TOP NAVIGATION ===================== -->
+    <header class="fade-in fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-white/10 shadow-sm">
+        <nav class="flex justify-between items-center px-8 py-1 w-full">
+
+            <div class="nav-logo tracking-[0.1em] text-[#1a4b9f] dark:text-white">
+                <img src="/static/img/Home/logo.svg" alt="Grotte Beach" class="h-20 w-auto object-contain" />
+            </div>
+
+            <!-- Desktop: links + button | Mobile: hamburger -->
+            <div class="flex items-center gap-6">
+
+                <div class="nav-links hidden md:flex items-center gap-8">
+                    <a href="index.html">Home</a>
+                    <a href="servizi.html">Servizi</a>
+                    <a href="esperienze_copia.html">Esperienze</a>
+                    <a href="food_V1.html">Food</a>
+                    <a href="eventi.html">Eventi</a>
+                    <a href="#">Merch</a>
+                    <a class="nav-active" href="contact.html">Contatti</a>
+                </div>
+
+                <a href="tel:+393891013881" class="nav-btn hidden md:block bg-[#1a4b9f] text-white px-6 py-2.5 rounded-full font-label-sm uppercase tracking-wider scale-95 active:scale-90 transition-transform">
+                    Prenota Ora
+                </a>
+
+                <!-- Hamburger (mobile only) -->
+                <button id="menu-toggle" class="nav-hamburger md:hidden p-1" aria-label="Apri menu">
+                    <span class="material-symbols-outlined" id="menu-icon">menu</span>
+                </button>
+
+            </div>
+
+        </nav>
+
+
+    </header>
+
+    <!-- Mobile full-screen menu overlay (outside header to avoid backdrop-filter containment) -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+        <nav class="flex flex-col items-center gap-10">
+            <a class="mobile-menu-link" href="index.html">Home</a>
+            <a class="mobile-menu-link" href="servizi.html">Servizi</a>
+            <a class="mobile-menu-link" href="esperienze_copia.html">Esperienze</a>
+            <a class="mobile-menu-link" href="food_V1.html">Food</a>
+            <a class="mobile-menu-link" href="eventi.html">Eventi</a>
+            <a class="mobile-menu-link" href="#">Merch</a>
+            <a class="mobile-menu-link nav-active" href="contact.html">Contatti</a>
+        </nav>
+        <a href="tel:+393891013881" class="mobile-prenota-btn mt-10 bg-[#1a4b9f] text-white px-10 py-4 rounded-full font-label-sm uppercase tracking-widest">
+            Prenota Ora
+        </a>
+    </div>
+
+    <main>
+
+        <!-- ===================== HERO ===================== -->
+        <section class="min-h-screen pt-32 pb-xl flex items-center relative overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: url('static/img/header3.jpg')">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="px-gutter container-max mx-auto w-full relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                    <!-- Info -->
+                    <div class="space-y-7">
+
+                        <!-- Titolo — sempre full width -->
+                        <div class="space-y-4">
+                            <span class="font-label-sm text-white/70 uppercase tracking-widest flex items-center gap-3">
+                                <span class="w-8 h-px bg-white/70 inline-block"></span>
+                                Dove siamo
+                            </span>
+                            <h1 class="font-['Epilogue'] text-5xl md:text-6xl font-semibold text-white leading-tight">
+                                Vieni a<br>trovarci.
+                            </h1>
+                            <p class="font-body-lg text-white/80 max-w-md leading-relaxed">
+                                Siamo nel cuore della riserva naturale di Marinello, tra il promontorio del Tindari e le Isole Eolie. Un posto che si sente prima ancora di vederlo.
+                            </p>
+                        </div>
+
+                        <!-- Dettagli contatto -->
+                        <div class="space-y-3">
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-11 h-11 flex-shrink-0 rounded-xl bg-white/15 backdrop-blur-sm flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white" style="font-size:20px">location_on</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-sm text-white/60 uppercase tracking-wider mb-1">Indirizzo</p>
+                                    <p class="font-body-md text-white leading-relaxed">Via Grotte, Mongiove<br>98066 Patti (ME), Sicilia</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-11 h-11 flex-shrink-0 rounded-xl bg-white/15 backdrop-blur-sm flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white" style="font-size:20px">call</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-sm text-white/60 uppercase tracking-wider mb-1">Telefono</p>
+                                    <a href="tel:+393891013881" class="font-body-md text-white hover:text-white/80 transition-colors">+39 389 101 3881</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-11 h-11 flex-shrink-0 rounded-xl bg-white/15 backdrop-blur-sm flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white" style="font-size:20px">mail</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-sm text-white/60 uppercase tracking-wider mb-1">Email</p>
+                                    <a href="mailto:grottebeach@yahoo.com" class="font-body-md text-white hover:text-white/80 transition-colors">grottebeach@yahoo.com</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Colonna destra: Orari stagionali + Come arrivare + Social -->
+                    <div class="mt-12 lg:mt-0 space-y-5">
+
+                        <!-- Orari stagionali -->
+                        <div class="bg-[#1a4b9f] rounded-2xl p-5 shadow-md">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-white" style="font-size:20px">schedule</span>
+                                <p class="font-label-sm text-white uppercase tracking-widest">Orari stagionali</p>
+                            </div>
+                            <p class="font-body-md text-white/80 leading-relaxed text-sm">
+                                Aperti tutti i gironi da maggio a settembre.<br>
+                                Consigliata la prenotazione per la cena al tramonto.
+                            </p>
+                        </div>
+
+                        <!-- Come arrivare -->
+                        <div class="bg-[#1a4b9f] rounded-2xl p-5 shadow-md">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-white" style="font-size:20px">directions_car</span>
+                                <p class="font-label-sm text-white uppercase tracking-widest">Come arrivare</p>
+                            </div>
+                            <p class="font-body-md text-white/80 leading-relaxed text-sm">
+                                Autostrada A18/A20 Messina-Palermo, uscita <strong class="text-white">Patti</strong>.<br>
+                                Seguire le indicazioni per Mongiove.<br>
+                            </p>
+                        </div>
+
+                        <!-- Social -->
+                        <div class="space-y-3">
+                            <p class="font-label-sm text-white/60 uppercase tracking-wider">Seguici</p>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://www.instagram.com/grotte_beach/" target="_blank" rel="noopener noreferrer"
+                                   class="flex items-center gap-2 px-5 py-2.5 rounded-full font-label-sm uppercase tracking-wider text-white shadow-sm hover:opacity-90 transition-opacity"
+                                   style="background: linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%)">
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                    Instagram
+                                </a>
+                                <a href="https://www.facebook.com/grottebeachmongiove" target="_blank" rel="noopener noreferrer"
+                                   class="flex items-center gap-2 px-5 py-2.5 bg-[#1877F2] rounded-full font-label-sm uppercase tracking-wider text-white shadow-sm hover:opacity-90 transition-opacity">
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.990 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                    Facebook
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== MAPPA ===================== -->
+        <section class="py-xl bg-[#F2EEE9]">
+            <div class="px-gutter container-max mx-auto w-full">
+
+                <div class="text-center mb-12">
+                    <span class="font-label-sm text-on-tertiary-container uppercase tracking-widest flex items-center justify-center gap-3 mb-4">
+                        <span class="w-8 h-px bg-on-tertiary-container inline-block"></span>
+                        Come raggiungerci
+                        <span class="w-8 h-px bg-on-tertiary-container inline-block"></span>
+                    </span>
+                    <h2 class="font-headline-lg text-primary">Raggiungici</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+
+                    <!-- Google Maps -->
+                    <div class="lg:col-span-2 rounded-[1.5rem] overflow-hidden shadow-md border-4 border-[#F2EEE9]">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12551.797917400458!2d14.9923996!3d38.1413677!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13169d7aecc0f9d5%3A0x3085fa7a514df85!2sGrotte%20Beach!5e0!3m2!1sit!2sit!4v1777366121406!5m2!1sit!2sit"
+                            width="100%"
+                            height="450"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Mappa Grotte Beach"
+                        ></iframe>
+                    </div>
+
+                    <!-- Indicazioni -->
+                    <div class="space-y-5">
+
+                        <div class="bg-[#F2EEE9] rounded-2xl p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary">directions_car</span>
+                                <h4 class="font-label-sm uppercase tracking-wider text-primary">In auto</h4>
+                            </div>
+                            <p class="font-body-md text-on-surface-variant text-sm leading-relaxed">
+                                Autostrada A18/A20 Messina-Palermo, uscita <strong class="text-on-surface">Patti</strong>. Seguire le indicazioni per Mongiove.
+                            </p>
+                        </div>
+
+                        <div class="bg-[#F2EEE9] rounded-2xl p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary">train</span>
+                                <h4 class="font-label-sm uppercase tracking-wider text-primary">In treno</h4>
+                            </div>
+                            <p class="font-body-md text-on-surface-variant text-sm leading-relaxed">
+                                Stazione di <strong class="text-on-surface">Patti-San Piero Patti</strong> sulla linea Messina-Palermo. Taxi o autobus locale fino a Mongiove.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-white dark:bg-slate-950 border-t border-amber-900/10 w-full">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-10 py-20 max-w-7xl mx-auto">
+
+            <!-- Brand -->
+            <div class="space-y-8">
+                <img src="/static/img/Home/logo.svg" alt="Grotte Beach" class="h-20 w-auto object-contain" />
+                <p class="font-['Epilogue'] text-sm font-light leading-relaxed text-slate-800 dark:text-slate-200">
+                    Un locale nel cuore della costa siciliana di Mongiove. Vivi il ritmo della marea e il lusso della natura.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="https://www.instagram.com/grotte_beach/" target="_blank" rel="noopener">
+                        <span class="material-symbols-outlined text-sm">photo_camera</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="https://www.facebook.com/grottebeachmongiove" target="_blank" rel="noopener">
+                        <span class="material-symbols-outlined text-sm">public</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="mailto:grottebeach@yahoo.com">
+                        <span class="material-symbols-outlined text-sm">mail</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="grid grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h5 class="font-label-sm uppercase tracking-widest text-primary">Scopri</h5>
+                    <ul class="space-y-2">
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="#">Location</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="esperienze_copia.html">Esperienze</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="food_V1.html">Food</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="servizi.html">Servizi</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="font-label-sm uppercase tracking-widest text-primary">Contatti</h5>
+                    <ul class="space-y-2">
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="https://www.instagram.com/grotte_beach/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="https://www.facebook.com/grottebeachmongiove" target="_blank" rel="noopener">Facebook</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="mailto:grottebeach@yahoo.com">Email</a></li>
+                        <li><a class="font-['Epilogue'] text-sm font-light text-slate-500 hover:text-[#1a4b9f] transition-colors" href="tel:+393891013881">Telefono</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="space-y-6">
+                <h5 class="font-label-sm uppercase tracking-widest text-primary">Resta in contatto</h5>
+                <p class="font-['Epilogue'] text-sm font-light text-slate-800">Aggiornamenti stagionali e accesso esclusivo agli eventi.</p>
+                <form class="flex border-b border-primary/20 focus-within:border-primary transition-all">
+                    <input
+                        class="bg-transparent border-none focus:ring-0 w-full font-label-sm uppercase tracking-wider text-xs py-3 px-0 placeholder:text-slate-400"
+                        placeholder="Indirizzo Email"
+                        type="email"
+                    />
+                    <button class="material-symbols-outlined text-primary" type="submit">trending_flat</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Footer bottom bar -->
+        <div class="max-w-7xl mx-auto px-10 py-10 border-t border-amber-900/5 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-['Epilogue'] text-sm font-light text-slate-500">&copy; 2026 Grotte Beach.</p>
+            <div class="flex gap-6 items-center">
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Sicilia, Italia</span>
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Mongiove - Patti (ME)</span>
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-slate-400">Sviluppato da <strong class="tracking-widest">TEKWORN</strong></span>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="static/js/contact.js"></script>
+
+</body></html>
