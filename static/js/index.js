@@ -224,6 +224,56 @@
     }, { passive: true });
 })();
 
+// ── Staff carousel ──
+(function () {
+    var carousel = document.getElementById('staff-carousel');
+    if (!carousel) return;
+
+    var slides = Array.from(carousel.querySelectorAll('.staff-slide'));
+    var dotsContainer = document.getElementById('staff-dots');
+    var prevBtn = document.getElementById('staff-prev');
+    var nextBtn = document.getElementById('staff-next');
+    var current = 0;
+    var timer;
+
+    var dots = slides.map(function (_, i) {
+        var dot = document.createElement('button');
+        dot.className = 'staff-dot';
+        dot.setAttribute('aria-label', 'Foto ' + (i + 1));
+        dot.addEventListener('click', function () { goTo(i); resetTimer(); });
+        dotsContainer.appendChild(dot);
+        return dot;
+    });
+
+    function goTo(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
+
+    function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(function () { goTo(current + 1); }, 3500);
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); resetTimer(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1); resetTimer(); });
+
+    goTo(0);
+    resetTimer();
+
+    var touchStartX = 0;
+    carousel.addEventListener('touchstart', function (e) {
+        touchStartX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    carousel.addEventListener('touchend', function (e) {
+        var dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 40) { goTo(dx < 0 ? current + 1 : current - 1); resetTimer(); }
+    }, { passive: true });
+})();
+
 // ── Hero fade-in on page load + IntersectionObserver for below-fold elements ──
 (function () {
     var els = Array.from(document.querySelectorAll('.fade-up'));
@@ -339,3 +389,5 @@
         cards.forEach(function (c) { c.classList.remove('is-active'); });
     });
 })();
+
+

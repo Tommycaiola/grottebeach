@@ -304,6 +304,33 @@ header .nav-btn {
     }
 }
 
+/* ── Staff carousel ── */
+.staff-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 0;
+}
+.staff-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+.staff-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: rgba(26, 75, 159, 0.25);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, width 0.3s;
+    padding: 0;
+}
+.staff-dot.active {
+    background: #1a4b9f;
+    width: 24px;
+}
+
 /* ── Experience cards: touch active state (mirrors group-hover) ── */
 .experience-card.is-active img {
     transform: scale(1.1);

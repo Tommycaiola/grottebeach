@@ -367,10 +367,10 @@
         </section>
 
         <!-- ===================== EREDITÀ MEDITERRANEA ===================== -->
-        <section class="overflow-hidden bg-[#faf9f8] py-xl">
+        <section class="overflow-hidden bg-[#faf9f8] pt-xl pb-0">
 
             <!-- Split: testo sinistra, immagine destra -->
-            <div class="flex flex-col lg:flex-row" style="min-height: 88vh;">
+            <div class="flex flex-col-reverse lg:flex-row" style="min-height: 88vh;">
 
                 <!-- Pannello testo -->
                 <div class="relative z-10 lg:w-[45%] flex flex-col justify-center py-20 px-10 lg:px-16 xl:px-24 bg-[#faf9f8]">
@@ -385,10 +385,13 @@
                     </div> -->
 
                     <!-- Eyebrow -->
-                    <span class="font-label-sm text-[#1a4b9f] uppercase tracking-[0.3em] mb-5 block" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0" data-aos-easing="ease-in-out">Mongiove &middot; Sicilia</span>
+                    <span class="font-label-sm text-on-tertiary-container uppercase tracking-widest flex items-center gap-3 mb-5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0" data-aos-easing="ease-in-out">
+                        <span class="w-8 h-px bg-on-tertiary-container inline-block"></span>
+                        Mongiove &middot; Sicilia
+                    </span>
 
                     <!-- Headline serif -->
-                    <h2 class="text-4xl lg:text-5xl xl:text-[3.5rem] font-bold text-[#1a4b9f] leading-tight mb-8" style="font-family: 'Libre Baskerville', Georgia, serif;" data-aos="fade-up" data-aos-duration="500" data-aos-delay="50" data-aos-easing="ease-in-out">
+                    <h2 class="text-4xl lg:text-5xl xl:text-[3.5rem] font-bold text-[#1a4b9f] leading-tight mb-8 font-headline-lg" data-aos="fade-up" data-aos-duration="500" data-aos-delay="50" data-aos-easing="ease-in-out">
                         Tradizione<br>Mediterranea<br>dal 1996
                     </h2>
 
@@ -430,6 +433,57 @@
         </section>
         <!-- ===================== fine EREDITÀ MEDITERRANEA ===================== -->
 
+        <!-- ===================== STAFF ===================== -->
+        <section class="relative mt-10 mb-10 overflow-hidden">
+
+            <!-- Overlay scuro per leggibilità -->
+            <div class="absolute inset-0 z-[5] bg-black/35 pointer-events-none"></div>
+
+            <!-- Testo in primo piano, centrato -->
+            <div class="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+                <div class="text-center px-6">
+                    <span class="font-label-sm text-white/70 uppercase tracking-[0.4em] mb-4 block" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0" data-aos-easing="ease-in-out">Il nostro team</span>
+                    <h2 class="font-headline-lg text-white/70 drop-shadow-xl" data-aos="fade-up" data-aos-duration="500" data-aos-delay="50" data-aos-easing="ease-in-out">Pronti ad accoglierti</h2>
+                </div>
+            </div>
+
+            <!-- Indicatore scroll — visibile solo su mobile/tablet -->
+            <div class="absolute bottom-4 right-5 z-20 flex items-center gap-1.5 lg:hidden pointer-events-none">
+                <span class="font-label-sm text-white/70 uppercase tracking-[0.3em] text-[11px]">Scorri</span>
+                <span class="material-symbols-outlined text-white/70" style="font-size:18px;">chevron_right</span>
+            </div>
+
+            <!-- Striscia 8 foto portrait senza gap — scroll orizzontale su mobile, 8 colonne su desktop -->
+            <div class="flex overflow-x-auto lg:overflow-x-hidden" style="scrollbar-width: none; -ms-overflow-style: none;">
+                <div class="flex-shrink-0 w-[40vw] sm:w-[28vw] md:w-[20vw] lg:w-[12.5%]" style="aspect-ratio: 9/15;">
+                    <img src="/static/img/Staff/staffgruppo.jpg" alt="Staff Grotte Beach" class="w-full h-full object-cover block" />
+                </div>
+                <div class="flex-shrink-0 w-[40vw] sm:w-[28vw] md:w-[20vw] lg:w-[12.5%]" style="aspect-ratio: 9/15;">
+                    <img src="/static/img/Staff/staffevento1.jpg" alt="Staff Grotte Beach" class="w-full h-full object-cover block" />
+                </div>
+                <div class="flex-shrink-0 w-[40vw] sm:w-[28vw] md:w-[20vw] lg:w-[12.5%]" style="aspect-ratio: 9/15;">
+                    <img src="/static/img/Staff/staffevento2.jpg" alt="Staff Grotte Beach" class="w-full h-full object-cover block" />
+                </div>
+                <div class="flex-shrink-0 w-[40vw] sm:w-[28vw] md:w-[20vw] lg:w-[12.5%]" style="aspect-ratio: 9/15;">
+                    <img src="/static/img/Staff/staffevento3.jpg" alt="Staff Grotte Beach" class="w-full h-full object-cover block" />
+                </div>
+                <div class="flex-shrink-0 w-[40vw] sm:w-[28vw] md:w-[20vw] lg:w-[12.5%]" style="aspect-ratio: 9/15;">
+                    <img src="/static/img/Staff/staffevento4.jpg" alt="Staff Grotte Beach" class="w-full h-full object-cover block" />
+                </div>
+                <div class="flex-shrink-0 w-[40vw] sm:w-[28vw] md:w-[20vw] lg:w-[12.5%]" style="aspect-ratio: 9/15;">
+                    <img src="/static/img/Staff/staffevento5.jpg" alt="Staff Grotte Beach" class="w-full h-full object-cover block" />
+                </div>
+                <div class="flex-shrink-0 w-[40vw] sm:w-[28vw] md:w-[20vw] lg:w-[12.5%]" style="aspect-ratio: 9/15;">
+                    <img src="/static/img/Staff/staffevento6.jpg" alt="Staff Grotte Beach" class="w-full h-full object-cover block" />
+                </div>
+                <div class="flex-shrink-0 w-[40vw] sm:w-[28vw] md:w-[20vw] lg:w-[12.5%]" style="aspect-ratio: 9/15;">
+                    <img src="/static/img/Staff/staffevento7.jpg" alt="Staff Grotte Beach" class="w-full h-full object-cover block" />
+                </div>
+            </div>
+
+        </section>
+        <!-- ===================== fine staff ===================== -->
+
         <!-- ===================== IL LOCALE ===================== -->
         <section class="locale-split relative overflow-hidden">
 
@@ -437,7 +491,7 @@
             <div class="lg:hidden w-full" style="height: 52vw; min-height: 240px; max-height: 420px;">
                 <img
                     class="w-full h-full object-cover"
-                    src="/static/img/header2.jpg"
+                    src="/static/img/header3.jpg"
                     alt="Il locale Grotte Beach — giardino, spiaggia e bar"
                 />
             </div>
@@ -446,7 +500,7 @@
             <div class="locale-split__bg hidden lg:block absolute inset-0 z-0">
                 <img
                     class="w-full h-full object-cover"
-                    src="/static/img/header2.jpg"
+                    src="/static/img/header3.jpg"
                     alt="Il locale Grotte Beach — giardino, spiaggia e bar"
                 />
                 <div class="absolute inset-0 bg-black/20"></div>
@@ -572,7 +626,10 @@
 
                     <!-- Testo -->
                     <div class="lg:w-1/2 space-y-6">
-                        <span class="font-label-sm text-primary uppercase tracking-[0.3em]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0" data-aos-easing="ease-in-out">Natura &amp; Territorio</span>
+                        <span class="font-label-sm text-on-tertiary-container uppercase tracking-widest flex items-center gap-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0" data-aos-easing="ease-in-out">
+                            <span class="w-8 h-px bg-on-tertiary-container inline-block"></span>
+                            Natura &amp; Territorio
+                        </span>
                         <h2 class="font-headline-lg text-primary leading-tight" data-aos="fade-up" data-aos-duration="500" data-aos-delay="50" data-aos-easing="ease-in-out">Nel cuore della Riserva Naturale</h2>
                         <p class="font-body-lg text-on-surface-variant leading-relaxed" data-aos="fade-up" data-aos-duration="500" data-aos-delay="75" data-aos-easing="ease-in-out">
                             Grotte Beach si trova alle porte della <strong class="text-on-surface font-semibold">Riserva Naturale Dei Laghetti di Marinello</strong>, uno degli angoli più incontaminati della costa siciliana. Lagune e fondali cristallini convivono in armonia a pochi passi da noi, regalando uno scenario unico nel Mediterraneo.
