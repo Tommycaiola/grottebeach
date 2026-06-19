@@ -173,9 +173,15 @@
         <!-- ===== HERO ===== -->
         <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
+                <!-- Immagine desktop -->
                 <img
-                    class="w-full h-full object-cover"
+                    class="hidden md:block w-full h-full object-cover"
                     src="/static/img/Servizi/headerservizi.png"
+                />
+                <!-- Immagine mobile -->
+                <img
+                    class="block md:hidden w-full h-full object-cover"
+                    src="/static/img/Servizi/ombrellone_giardino.jpg"
                 />
                 <div class="absolute inset-0 bg-black/40"></div>
             </div>
